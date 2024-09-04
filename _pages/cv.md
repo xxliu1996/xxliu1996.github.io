@@ -10,7 +10,11 @@ redirect_from:
 <div class="wordwrap">You can also view my CV as a pdf on <a href="https://xxliu1996.github.io/files/2021-06-23-deep-convolutional-feature-based-fluorescence-to-color-image-registration.pdf">CV</a>.
 </div>
 
-&nbsp;
+div {
+border: 1px solid red;
+min-height: 1.25em;
+line-height: 1.25;
+}
 
 {% include base_path %}
 
