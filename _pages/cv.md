@@ -33,18 +33,18 @@ Work experience
   
 Skills
 ======
-<div style="display: flex;">
-  <dive stype="width: 20%;">
+<div stype="display: flex;>
+  <div style="width: 20%;">
     Python
     Test
     Test
   </div>
-  <dive stype="width: 20%;">
+  <div style="width: 20%;">
     C++
     Test
     Test
   </div>
-  <dive stype="width: 20%;">
+  <div style="width: 20%;">
     C#
     Test
     Test
