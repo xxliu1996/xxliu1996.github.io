@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Xingxing Liu"
 title_separator          : "-"
 name                     : &name "Xingxing Liu"
-description              : &"This is Xingxing Liu's personal site."
+description              : &This is Xingxing Liu's personal site.
 url                      : https://xxliu1996.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "xxliu1996/xxliu1996.github.io"
