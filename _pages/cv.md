@@ -7,7 +7,10 @@ redirect_from:
   - /resume
 ---
 
-<div class="wordwrap">You can also view my CV as a pdf on <a href="{https://xxliu1996.github.io/files/2021-06-23-deep-convolutional-feature-based-fluorescence-to-color-image-registration.pdf}">CV</a>.</div>
+<div class="wordwrap">You can also view my CV as a pdf on <a href="https://xxliu1996.github.io/files/2021-06-23-deep-convolutional-feature-based-fluorescence-to-color-image-registration.pdf">CV</a>.
+</div>
+
+<br/>
 
 {% include base_path %}
 
