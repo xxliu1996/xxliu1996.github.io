@@ -12,8 +12,8 @@ redirect_from:
 
 div {
 border: 1px solid red;
-min-height: 1.25em;
-line-height: 1.25;
+min-height: 0.75em;
+line-height: 0.75;
 }
 
 {% include base_path %}
