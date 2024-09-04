@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Xingxing Liu"
 title_separator          : "-"
 name                     : &name "Xingxing Liu"
-description              : &Welcome to my site."
+description              : &This is Xingxing Liu's personal site."
 url                      : https://xxliu1996.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "xxliu1996/xxliu1996.github.io"
@@ -24,10 +24,10 @@ author:
   avatar           : "profile.png"
   name             : "Xingxing Liu"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "I am a final-yeal Ph.D. candidate. My research mainly focus on AI Healthcare."
   location         : "United States"
   employer         : "University of Iowa"
-  uri              : # URL
+  uri              : "xxliu1996.github.io" # URL
   email            : "xingxing-liu@uiowa.edu" 
 
   # Academic websites
