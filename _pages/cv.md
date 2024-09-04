@@ -33,7 +33,7 @@ Work experience
   
 Skills
 ======
-<div stype="display: flex;>
+<div style="display: flex;>
   <div style="width: 20%;">
     Python
     Test
