@@ -36,12 +36,18 @@ Skills
 <div style="display: flex;">
   <dive stype="width: 20%;">
     Python
+    Test
+    Test
   </div>
   <dive stype="width: 20%;">
     C++
+    Test
+    Test
   </div>
   <dive stype="width: 20%;">
     C#
+    Test
+    Test
   </div>
 </div>
 
