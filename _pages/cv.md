@@ -33,13 +33,17 @@ Work experience
   
 Skills
 ======
-<table>
-  <tr>
-    <td >测试</td>
-    <td>文本部分</td>
-    <td>文本部分</td>
-  </tr>
-</table>
+<div style="display: flex;">
+  <dive stype="width: 20%;">
+    Python
+  </div>
+  <dive stype="width: 20%;">
+    C++
+  </div>
+  <dive stype="width: 20%;">
+    C#
+  </div>
+</div>
 
 Publications
 ======
