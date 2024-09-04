@@ -33,23 +33,9 @@ Work experience
   
 Skills
 ======
-<div style="display: flex;>
-  <div style="width: 20%;">
-    Python
-    Test
-    Test
-  </div>
-  <div style="width: 20%;">
-    C++
-    Test
-    Test
-  </div>
-  <div style="width: 20%;">
-    C#
-    Test
-    Test
-  </div>
-</div>
+Python
+C++
+C#
 
 Publications
 ======
