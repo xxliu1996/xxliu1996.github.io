@@ -20,6 +20,7 @@ Education
 Work experience
 ======
 * University of Iowa
+
 Graduate Research Assistant Aug. 2019 - May 2025 (Expected)
   * Github University
   * Duties includes: Updates and improvements to template
