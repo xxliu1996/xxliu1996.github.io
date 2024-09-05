@@ -1,7 +1,7 @@
 ---
 title: '2023 暑期实习申请总结'
 date: 2023-01-02
-permalink: /posts/2012/08/blog-post-1/
+permalink: /posts/2023/01/blog-post-summer-intern-application/
 tags:
   - 求职
   - 美国留学
