@@ -17,10 +17,10 @@ tags:
 
 所以，对于图像中的某个点，我们需要一个函数，来衡量包含该点的窗口内的像素平均值对滑动的敏感度。对于窗口$W$和位移$\Delta$，定义窗口函数$S_{W}$。该函数计算窗口沿着某个方向移动后，窗口内的每个点的像素变化值的平方和。
 
-$\Delta = [\Delta x, \Delta y] \\ S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}{(f(x_i, y_i) - f(x_i + \Delta x, y_i + \Delta y))}^{2}$
+$$\Delta = [\Delta x, \Delta y] \\ S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}{(f(x_i, y_i) - f(x_i + \Delta x, y_i + \Delta y))}^{2}$$
 
-$\Delta = [\Delta x, \Delta y] \\ S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}{(f(x_i, y_i) - f(x_i + \Delta x, y_i + \Delta y))}^{2}$
+$$\Delta = [\Delta x, \Delta y] \\ S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}{(f(x_i, y_i) - f(x_i + \Delta x, y_i + \Delta y))}^{2}$$
 
 用泰勒展开公式，可以得到 
 
-$f(x_i + \Delta x, y_i + \Delta y) \approx f(x_i, y_i) + [\frac{\partial f(x_i, y_i)}{\partial x} ,\frac{\partial f(x_i, y_i)}{\partial y}]{[\Delta x , \Delta y]}^{T} \\ S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}[\Delta x, \Delta y]({[\frac{\partial f(x_i, y_i)}{\partial x} ,\frac{\partial f(x_i, y_i)}{\partial y}]}^{T}[\frac{\partial f(x_i, y_i)}{\partial x} ,\frac{\partial f(x_i, y_i)}{\partial y}]){[\Delta x , \Delta y]}^{T} \\ = [\Delta x , \Delta y]\begin{bmatrix}  \sum_{(x_i, y_i) \in W}{{(\frac{\partial   f(x_i, y_i)}{\partial x})}^{2}} & \sum_{(x_i, y_i) \in W}{\frac{\partial   f(x_i, y_i)}{\partial x}} {\frac{\partial   f(x_i, y_i)}{\partial y}} \\ \sum_{(x_i, y_i) \in W}{\frac{\partial   f(x_i, y_i)}{\partial x}} {\frac{\partial   f(x_i, y_i)}{\partial y}} & \sum_{(x_i, y_i) \in W}{{(\frac{\partial   f(x_i, y_i)}{\partial y})}^{2}}\end{bmatrix} {[\Delta x , \Delta y]}^{T} \\ = [\Delta x , \Delta y] A_W(x , y) {[\Delta x , \Delta y]}^{T}$
+$$f(x_i + \Delta x, y_i + \Delta y) \approx f(x_i, y_i) + [\frac{\partial f(x_i, y_i)}{\partial x} ,\frac{\partial f(x_i, y_i)}{\partial y}]{[\Delta x , \Delta y]}^{T} \\ S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}[\Delta x, \Delta y]({[\frac{\partial f(x_i, y_i)}{\partial x} ,\frac{\partial f(x_i, y_i)}{\partial y}]}^{T}[\frac{\partial f(x_i, y_i)}{\partial x} ,\frac{\partial f(x_i, y_i)}{\partial y}]){[\Delta x , \Delta y]}^{T} \\ = [\Delta x , \Delta y]\begin{bmatrix}  \sum_{(x_i, y_i) \in W}{{(\frac{\partial   f(x_i, y_i)}{\partial x})}^{2}} & \sum_{(x_i, y_i) \in W}{\frac{\partial   f(x_i, y_i)}{\partial x}} {\frac{\partial   f(x_i, y_i)}{\partial y}} \\ \sum_{(x_i, y_i) \in W}{\frac{\partial   f(x_i, y_i)}{\partial x}} {\frac{\partial   f(x_i, y_i)}{\partial y}} & \sum_{(x_i, y_i) \in W}{{(\frac{\partial   f(x_i, y_i)}{\partial y})}^{2}}\end{bmatrix} {[\Delta x , \Delta y]}^{T} \\ = [\Delta x , \Delta y] A_W(x , y) {[\Delta x , \Delta y]}^{T}$$
