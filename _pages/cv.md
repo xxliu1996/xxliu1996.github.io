@@ -19,19 +19,21 @@ Education
 
 Work experience
 ======
-* University of Iowa
+## University of Iowa
 
-Graduate Research Assistant Aug. 2019 - May 2025 (Expected)
+Graduate Research Assistant | Aug. 2019 - May 2025 (Expected)
   * Github University
   * Duties includes: Updates and improvements to template
   * Supervisor: The Users
 
-* Alcon Laboratories
+## Alcon Laboratories
+Research & Development Intern | June 2024 - Aug. 2024
   * Github University
   * Duties included: Merging pull requests
   * Supervisor: Professor Hub
 
-* Philips North America
+## Philips North America
+Research Scientist Intern | June 2023 - Aug. 2023
   * Github University
   * Duties included: Tagging issues
   * Supervisor: Professor Git
