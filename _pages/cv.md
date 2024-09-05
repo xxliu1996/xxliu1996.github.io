@@ -21,21 +21,17 @@ Work experience
 ======
 * ## University of Iowa
 Graduate Research Assistant | Aug. 2019 - May 2025 (Expected)
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+  * Develop a surgical navigation system that enables 3D visualization of spine anatomy and precise tracking of surgical tools, with the potential to enhance the accuracy and safety of spine procedures.
+  * Develop a deep network model for cross-domain spine segmentation, trained on T2 MRI images and capable of accurately segmenting both T1 and T2 MRI images.
+  * Develop an algorithm for fluorescence-to-color image registration using features detected by a convolutional neural network.
 
 * ## Alcon Laboratories
 Research & Development Intern | June 2024 - Aug. 2024
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+  * Work on optimizing eye limbus and pupil detection programs with GPU acceleration. Employ CUDA to accelerate key stages of the eye image processing pipeline including rotation, filtering, edge detection, etc.
 
 * ## Philips North America
 Research Scientist Intern | June 2023 - Aug. 2023
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+  * Develop deep network models for 3D cerebral angiography segmentation to enhance catheter navigation in endovascular procedures.
   
 Skills
 ======
