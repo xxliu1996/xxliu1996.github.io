@@ -41,12 +41,12 @@ td, th {
 }
 </style>
 
-
-| Time         | Length        | Speed              | Mass         |
-| ------------ | ------------- | ------------------ | ------------ |
-| -Millisecond | Millimetre    | Kilometre per hour | Milligram    |
-| Second       | Centimetre    | Foot per second    | Gram         |
-| Minute       | Inch          | Miles per hour     | Ounce        |
+| Programming<div style="width:100px">         | Tools<div style="width:100px">               | Software<div style="width:100px">            |
+| ------------------- | ------------------- | ------------------- | 
+| C++                 | Pytorch             | 3D Slicer           | 
+| Python              | Tensorflow          | Matlab              | 
+| C#                  | OpenCV              | Qt Creator          | 
+| Verilog             | PCL                 | Unity               |
 
 Publications
 ======
