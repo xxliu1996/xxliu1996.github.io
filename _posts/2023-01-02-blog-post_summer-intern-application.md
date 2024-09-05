@@ -83,7 +83,7 @@ tags:
 |------------------|-------|-------|---|
 |Intel（2）	|AI 框架	|Intel 求职官网	|没有回应|
 |Adobe （3）	|机器学习、软件工程	|Adobe 求职官网	|没有回应|
-|Meta（2）	|计算机图形、虚拟现实开发	|Meta |求职官网	|没有回应|
+|Meta（2）	|计算机图形、虚拟现实开发	|Meta 求职官网	|没有回应|
 |Google（4）	|机器学习、软件工程	|Google 求职官网	|没有回应|
 |Amazon（3）	|计算机视觉、机器人、机器学习、软件工程	|Amazon 求职官网	|没有回应|
 |Apple（2）	|机器学习、软件工程	|Apple 求职官网	|没有回应|
@@ -92,7 +92,7 @@ tags:
 |Samsung Semiconductor US（3）	|计算机视觉、机器学习	|Samsung Semiconductor US 求职官网	|没有回应|
 |JPMorgan Chase & Co（2）	|人工智能、软件工程	|求职分享群	|做了一个线上评测（编程以及录制视频回答问题），就没有回应了|
 |KLA（3）	|机器学习、软件工程	|有个校友师兄在那里实习过	|没有回应|
-|Tecent America（2）|机器学习、软件工程	|Tecent America |求职官网	|没有回应|
+|Tecent America（2）|机器学习、软件工程	|Tecent America 求职官网	|没有回应|
 |Rivian（3）	|计算机视觉、软件工程	|领英	|没有回应|
 |Pinterest（1）	|Pinterest 实验室	|求职分享群	|据信|
 |Snapresearch（1）	|拍照特效（？）	|求职分享群	|没有回应|
