@@ -5,6 +5,7 @@ permalink: /posts/2023/01/blog-post-summer-intern-application/
 tags:
   - 求职
   - 美国留学
+  - 实习
 ---
 <img src='/images/blog/2023-summer-intern-application/blog-2023summerintern-1.jpg'>
 
