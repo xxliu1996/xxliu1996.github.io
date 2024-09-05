@@ -19,17 +19,18 @@ Education
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
+* University of Iowa
+Graduate Research Assistant Aug. 2019 - May 2025 (Expected)
   * Github University
   * Duties includes: Updates and improvements to template
   * Supervisor: The Users
 
-* Fall 2015: Research Assistant
+* Alcon Laboratories
   * Github University
   * Duties included: Merging pull requests
   * Supervisor: Professor Hub
 
-* Summer 2015: Research Assistant
+* Philips North America
   * Github University
   * Duties included: Tagging issues
   * Supervisor: Professor Git
