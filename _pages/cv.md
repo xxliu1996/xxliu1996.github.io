@@ -44,11 +44,11 @@ table th:first-of-type {
     width: 100px;
 }
 table th:nth-of-type(2) {
-    width: 200px;
+    width: 100px;
 }
 
 table th:nth-of-type(3) {
-    width: 200px;
+    width: 100px;
 }
 
 </style>
