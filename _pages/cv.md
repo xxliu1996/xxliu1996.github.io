@@ -41,7 +41,7 @@ td, th {
 }
 </style>
 
-| Programming<div style="width:100px">         | Tools<div style="width:100px">               | Software<div style="width:100px">            |
+|<div style="width:100px">Programming</div>        |<div style="width:100px">Tools</div>               |<div style="width:100px">Software</div>            |
 | ------------------- | ------------------- | ------------------- | 
 | C++                 | Pytorch             | 3D Slicer           | 
 | Python              | Tensorflow          | Matlab              | 
