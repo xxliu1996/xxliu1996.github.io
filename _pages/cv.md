@@ -35,9 +35,18 @@ Research Scientist Intern | June 2023 - Aug. 2023
   
 Skills
 ======
-Python
-C++
-C#
+<style>
+td, th {
+   border: none!important;
+}
+</style>
+
+
+| Time         | Length        | Speed              | Mass         |
+| ------------ | ------------- | ------------------ | ------------ |
+| -Millisecond | Millimetre    | Kilometre per hour | Milligram    |
+| Second       | Centimetre    | Foot per second    | Gram         |
+| Minute       | Inch          | Miles per hour     | Ounce        |
 
 Publications
 ======
