@@ -39,9 +39,21 @@ Skills
 td, th {
    border: none!important;
 }
+
+table th:first-of-type {
+    width: 100px;
+}
+table th:nth-of-type(2) {
+    width: 200px;
+}
+
+table th:nth-of-type(3) {
+    width: 200px;
+}
+
 </style>
 
-|<div style="width:100px">Programming</div>        |<div style="width:100px">Tools</div>               |<div style="width:100px">Software</div>            |
+| Programming         | Tools               | Software            |
 | ------------------- | ------------------- | ------------------- | 
 | C++                 | Pytorch             | 3D Slicer           | 
 | Python              | Tensorflow          | Matlab              | 
