@@ -11,3 +11,10 @@ I am a 5th year Ph.D. student majoring in Electrical and Computer Engineering at
 My research lies in surgical navigation, deep learning, computer vision, medical image processing. My goal is incorporating cutting-edge technologies into surgical navigation systems. In my projects, I applied deep learning to medical image processing, including spine segmentation, fluorescence-to-color image registration. My current project focuses on incorporating 3D surgical tool tracking techinque into our fluorescence imaging surgical navigation system. These projects help me to develop solidate skills on C/C++/Python programming, deep network implementation with Pytorch/Tensorflow, CT/MRI processing, etc.  
  
 Also, I have devloped additional skills on C#/Matlab/HTML/JavaScript programming, Unity game development, using 3D Slicer/ImageJ to process medical images, 3D CAD design, 3D printing, etc. 
+
+News
+======
+
+2024-08-23
+-------
+Xingxing Liu has just finished his 3-month intern at Alcon Laboratories at Lake Forest, CA.
