@@ -67,3 +67,7 @@ $$
 * $$\lambda_1$$和$$\lambda_2$$都很小：窗口$$W$$所包围的区域存在角点。
 
 <img src='/images/blog/2023-harris-corner-detection/corner-detection-3.png'>
+
+为了更方便地找到角点，定义函数$$R(A_W)$$如下，其中$$\kappa$$的取值范围是 0.04 和 0.10 之间。 
+$$R(A_W) = det (A_W) - \kappa {(trace(A_W))}^{2} = (\lambda_1 \times \lambda_2) - \kappa {(\lambda_1 + \lambda_2)}^{2}$$
+设定适当的阈值，若$$R(A_W)$$高于该阈值，则该区域包含角点。
