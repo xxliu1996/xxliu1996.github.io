@@ -7,7 +7,7 @@ tags:
   - 美国留学
   - 实习
 ---
-<img src='/images/blog/2023-summer-intern-application/blog-2023summerintern-1.jpg'>
+<img src='/images/blog/2023-harris-corner-detection/corner-detection-1.jpeg'>
 
 图像处理作业，分享出来。不足之处，多多见谅。欢迎提出改进意见。
 
@@ -17,8 +17,9 @@ tags:
 
 所以，对于图像中的某个点，我们需要一个函数，来衡量包含该点的窗口内的像素平均值对滑动的敏感度。对于窗口$$W$$和位移$$\Delta$$，定义窗口函数$$S_{W}$$。该函数计算窗口沿着某个方向移动后，窗口内的每个点的像素变化值的平方和。
 
-$$\Delta = [\Delta x, \Delta y] \\ S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}{(f(x_i, y_i) - f(x_i + \Delta x, y_i + \Delta y))}^{2}$$
+$$\Delta = [\Delta x, \Delta y]$$
 
-$$\Delta = [\Delta x, \Delta y] \\ S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}{(f(x_i, y_i) - f(x_i + \Delta x, y_i + \Delta y))}^{2}$$
+$$S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}{(f(x_i, y_i) - f(x_i + \Delta x, y_i + \Delta y))}^{2}$$
+
 
 用泰勒展开公式，可以得到如下
