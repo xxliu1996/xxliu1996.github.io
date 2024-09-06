@@ -57,7 +57,7 @@ body {
   height: 25px;
   right: -17px;
   background-color: yellow;
-  border: 4px solid #FF9F55;
+  border: 4px solid orange;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -82,7 +82,7 @@ body {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid white;
+  border: medium solid orange;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent white;
 }
@@ -96,9 +96,9 @@ body {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid white;
+  border: medium solid orange;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent orange transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -131,9 +131,9 @@ body {
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
   left: 60px;
-  border: medium solid white;
+  border: medium solid black;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent black transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
@@ -148,6 +148,8 @@ body {
 }
 </style>
 
+News
+======
 <div class="timeline">
   <div class="container left">
     <div class="content">
