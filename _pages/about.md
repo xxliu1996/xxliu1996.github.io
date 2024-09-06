@@ -56,8 +56,8 @@ body {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: yellow;
-  border: 4px solid orange;
+  background-color: black;
+  border: 4px solid black;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -82,9 +82,9 @@ body {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid orange;
+  border: medium solid black;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent black;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -96,9 +96,9 @@ body {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid orange;
+  border: medium solid black;
   border-width: 10px 10px 10px 0;
-  border-color: transparent orange transparent transparent;
+  border-color: transparent black transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
