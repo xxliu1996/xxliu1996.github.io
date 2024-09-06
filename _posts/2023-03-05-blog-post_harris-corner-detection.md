@@ -27,10 +27,39 @@ $$f(x_i + \Delta x, y_i + \Delta y) \approx f(x_i, y_i) + [\frac{\partial{f(x_i,
 $$S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}[\Delta x, \Delta y]({[\frac{\partial{f(x_i, y_i)}}{\partial{x}} ,\frac{\partial{f(x_i, y_i)}}{\partial{y}}]}^{T}[\frac{\partial{f(x_i, y_i)}}{\partial{x}} ,\frac{\partial{f(x_i, y_i)}}{\partial{y}}]){[\Delta x , \Delta y]}^{T}$$
 
 $$
-= [\Delta x , \Delta y]
-\begin{bmatrix}  
-\sum_{(x_i, y_i) \in W}
-{{(\frac{\partial{f(x_i, y_i)}}{\partial{x}})}^2}
-\end{bmatrix} 
-{[\Delta x , \Delta y]}^{T} 
+\[
+f(x_i + \Delta x, y_i + \Delta y) \approx f(x_i, y_i) + 
+\begin{bmatrix}
+\frac{\partial f(x_i, y_i)}{\partial x} & \frac{\partial f(x_i, y_i)}{\partial y}
+\end{bmatrix}
+\begin{bmatrix}
+\Delta x \\
+\Delta y
+\end{bmatrix}
+\]
+
+\[
+S_W(\Delta) = \sum_{(x_i,y_i)\in W} [\Delta x, \Delta y]
+\left[ 
+\begin{array}{cc}
+\left(\frac{\partial f(x_i,y_i)}{\partial x}\right)^2 & \frac{\partial f(x_i,y_i)}{\partial x} \frac{\partial f(x_i,y_i)}{\partial y} \\
+\frac{\partial f(x_i,y_i)}{\partial x} \frac{\partial f(x_i,y_i)}{\partial y} & \left(\frac{\partial f(x_i,y_i)}{\partial y}\right)^2
+\end{array}
+\right]
+[\Delta x, \Delta y]^T
+\]
+
+\[
+= [\Delta x, \Delta y] \left[
+\begin{array}{cc}
+\sum_{(x_i,y_i)\in W} \left(\frac{\partial f(x_i,y_i)}{\partial x}\right)^2 & \sum_{(x_i,y_i)\in W} \frac{\partial f(x_i,y_i)}{\partial x} \frac{\partial f(x_i,y_i)}{\partial y} \\
+\sum_{(x_i,y_i)\in W} \frac{\partial f(x_i,y_i)}{\partial x} \frac{\partial f(x_i,y_i)}{\partial y} & \sum_{(x_i,y_i)\in W} \left(\frac{\partial f(x_i,y_i)}{\partial y}\right)^2
+\end{array}
+\right]
+[\Delta x, \Delta y]^T
+\]
+
+\[
+= [\Delta x, \Delta y] A_W (x, y) [\Delta x, \Delta y]^T
+\]
 $$
