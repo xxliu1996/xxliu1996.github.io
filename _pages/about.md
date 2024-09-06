@@ -45,7 +45,7 @@ body {
 .container {
   padding: 10px 40px;
   position: relative;
-  background-color: inherit;
+  background-color: black;
   width: 50%;
 }
 
