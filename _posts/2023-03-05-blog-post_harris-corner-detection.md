@@ -3,9 +3,9 @@ title: 'Harris角点检测Python实现'
 date: 2023-03-05
 permalink: /posts/2023/03/blog-post-harris-corner-detection/
 tags:
-  - 求职
-  - 美国留学
-  - 实习
+  - 图像处理
+  - 计算机视觉
+  - 算法
 ---
 <img src='/images/blog/2023-harris-corner-detection/corner-detection-1.jpeg'>
 
