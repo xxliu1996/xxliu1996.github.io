@@ -32,6 +32,7 @@ f(x_i + \Delta x, y_i + \Delta y) \approx f(x_i, y_i) +
 \Delta y
 \end{bmatrix}
 $$
+
 $$
 S_W(\Delta) = \sum_{(x_i,y_i)\in W} [\Delta x, \Delta y]
 \left[ 
@@ -42,6 +43,7 @@ S_W(\Delta) = \sum_{(x_i,y_i)\in W} [\Delta x, \Delta y]
 \right]
 [\Delta x, \Delta y]^T
 $$
+
 $$
 = [\Delta x, \Delta y] \left[
 \begin{array}{cc}
@@ -51,6 +53,7 @@ $$
 \right]
 [\Delta x, \Delta y]^T
 $$
+
 $$
 = [\Delta x, \Delta y] A_W (x, y) [\Delta x, \Delta y]^T
 $$
