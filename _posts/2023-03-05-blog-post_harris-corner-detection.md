@@ -24,7 +24,6 @@ $$S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}{(f(x_i, y_i) - f(x_i + \Delta x, y_
 用泰勒展开公式，可以得到如下
 
 $$
-\[
 f(x_i + \Delta x, y_i + \Delta y) \approx f(x_i, y_i) + 
 \begin{bmatrix}
 \frac{\partial f(x_i, y_i)}{\partial x} & \frac{\partial f(x_i, y_i)}{\partial y}
@@ -33,9 +32,8 @@ f(x_i + \Delta x, y_i + \Delta y) \approx f(x_i, y_i) +
 \Delta x \\
 \Delta y
 \end{bmatrix}
-\]
 
-\[
+
 S_W(\Delta) = \sum_{(x_i,y_i)\in W} [\Delta x, \Delta y]
 \left[ 
 \begin{array}{cc}
@@ -44,9 +42,7 @@ S_W(\Delta) = \sum_{(x_i,y_i)\in W} [\Delta x, \Delta y]
 \end{array}
 \right]
 [\Delta x, \Delta y]^T
-\]
 
-\[
 = [\Delta x, \Delta y] \left[
 \begin{array}{cc}
 \sum_{(x_i,y_i)\in W} \left(\frac{\partial f(x_i,y_i)}{\partial x}\right)^2 & \sum_{(x_i,y_i)\in W} \frac{\partial f(x_i,y_i)}{\partial x} \frac{\partial f(x_i,y_i)}{\partial y} \\
@@ -54,9 +50,6 @@ S_W(\Delta) = \sum_{(x_i,y_i)\in W} [\Delta x, \Delta y]
 \end{array}
 \right]
 [\Delta x, \Delta y]^T
-\]
 
-\[
 = [\Delta x, \Delta y] A_W (x, y) [\Delta x, \Delta y]^T
-\]
 $$
