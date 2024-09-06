@@ -22,7 +22,9 @@ $$\Delta = [\Delta x, \Delta y]$$
 $$S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}{(f(x_i, y_i) - f(x_i + \Delta x, y_i + \Delta y))}^{2}$$
 
 用泰勒展开公式，可以得到如下
+
 $$
+\[
 f(x_i + \Delta x, y_i + \Delta y) \approx f(x_i, y_i) + 
 \begin{bmatrix}
 \frac{\partial f(x_i, y_i)}{\partial x} & \frac{\partial f(x_i, y_i)}{\partial y}
@@ -31,6 +33,7 @@ f(x_i + \Delta x, y_i + \Delta y) \approx f(x_i, y_i) +
 \Delta x \\
 \Delta y
 \end{bmatrix}
+\]
 
 \[
 S_W(\Delta) = \sum_{(x_i,y_i)\in W} [\Delta x, \Delta y]
