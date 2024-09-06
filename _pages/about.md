@@ -38,7 +38,7 @@ body {
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  margin-left: -3px; /* Keep the ruler centered */
 }
 
 /* Container around content */
@@ -55,7 +55,7 @@ body {
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -17px;
+  right: -13px; /* Adjusted to center the circle */
   background-color: black; /* Changed to black */
   border: 4px solid gray; /* Changed border to gray */
   top: 15px;
@@ -103,7 +103,7 @@ body {
 
 /* Fix the circle for containers on the right side */
 .right::after {
-  left: -16px;
+  left: -13px; /* Adjusted to center the circle */
 }
 
 /* The actual content */
