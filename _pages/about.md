@@ -17,52 +17,64 @@ Also, I have devloped additional skills on C#/Matlab/HTML/JavaScript programming
   box-sizing: border-box;
 }
 
+body {
+  background-color: white; /* Changed to white */
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* The vertical ruler */
 .timeline::after {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #ddd;
+  background-color: gray; /* Changed to gray */
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
 }
 
-.timeline-item {
+/* Container around content */
+.container {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
 }
 
-.timeline-item::after {
+/* The circles on the timeline */
+.container::after {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: white;
-  border: 4px solid black;
+  background-color: black; /* Changed to black */
+  border: 4px solid gray; /* Changed border to gray */
   top: 15px;
   border-radius: 50%;
   z-index: 1;
 }
 
-.container.left {
+/* Place the container to the left */
+.left {
   left: 0;
 }
 
-.container.right {
+/* Place the container to the right */
+.right {
   left: 50%;
 }
 
-.container.left::before {
+/* Add arrows to the left container (pointing right) */
+.left::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -75,7 +87,8 @@ Also, I have devloped additional skills on C#/Matlab/HTML/JavaScript programming
   border-color: transparent transparent transparent white;
 }
 
-.container.right::before {
+/* Add arrows to the right container (pointing left) */
+.right::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -88,12 +101,51 @@ Also, I have devloped additional skills on C#/Matlab/HTML/JavaScript programming
   border-color: transparent white transparent transparent;
 }
 
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
 .content {
   padding: 20px 30px;
   background-color: white;
+  border: 2px solid gray; /* Changed border to gray */
   position: relative;
   border-radius: 6px;
-  border: 1px solid black;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timeline to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
 }
 </style>
 
