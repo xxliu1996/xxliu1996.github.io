@@ -29,8 +29,7 @@ $$S_{W}(\Delta) = \sum_{(x_i, y_i) \in W}^{}[\Delta x, \Delta y]({[\frac{\partia
 $$
 = [\Delta x , \Delta y]
 \begin{bmatrix}  
-\sum_{(x_i, y_i) \in W}{{(\frac{\partial   f(x_i, y_i)}{\partial x})}^{2}} & \sum_{(x_i, y_i) \in W}{\frac{\partial   f(x_i, y_i)}{\partial x}} {\frac{\partial   f(x_i, y_i)}{\partial y}} 
-\\ \sum_{(x_i, y_i) \in W}{\frac{\partial   f(x_i, y_i)}{\partial x}} {\frac{\partial   f(x_i, y_i)}{\partial y}} & \sum_{(x_i, y_i) \in W}{{(\frac{\partial   f(x_i, y_i)}{\partial y})}^{2}}
+\sum_{(x_i, y_i) \in W}{{(\frac{\partial{f(x_i, y_i)}}{\partial{x}})}^{2}} & \sum_{(x_i, y_i) \in W}{\frac{\partial{f(x_i, y_i)}}{\partial{x}}} {\frac{\partial{f(x_i, y_i)}}{\partial{y}}}
 \end{bmatrix} 
 {[\Delta x , \Delta y]}^{T} 
 $$
