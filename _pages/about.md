@@ -45,7 +45,7 @@ body {
 .container {
   padding: 10px 40px;
   position: relative;
-  background-color: black;
+  background-color: inherit;
   width: 50%;
 }
 
@@ -84,7 +84,7 @@ body {
   right: 30px;
   border: medium solid black;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent black;
+  border-color: black black black black black;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -98,7 +98,7 @@ body {
   left: 30px;
   border: medium solid black;
   border-width: 10px 10px 10px 0;
-  border-color: transparent black transparent transparent;
+  border-color: black black black black;
 }
 
 /* Fix the circle for containers on the right side */
@@ -133,7 +133,7 @@ body {
   left: 60px;
   border: medium solid black;
   border-width: 10px 10px 10px 0;
-  border-color: transparent black transparent transparent;
+  border-color: black black black black;
   }
 
   /* Make sure all circles are at the same spot */
