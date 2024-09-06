@@ -65,3 +65,5 @@ $$
 * $$\lambda_1$$和$$\lambda_2$$都很小：没有边或者角点，窗口$$W$$所包围的是一个像素均匀分布和缓慢变化的区域。
 * $$\lambda_1$$和$$\lambda_2$$都很小：窗口$$W$$所包围的区域存在边，没有角点。
 * $$\lambda_1$$和$$\lambda_2$$都很小：窗口$$W$$所包围的区域存在角点。
+
+<img src='/images/blog/2023-harris-corner-detection/corner-detection-3.png'>
