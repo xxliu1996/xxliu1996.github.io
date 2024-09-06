@@ -18,7 +18,7 @@ Also, I have devloped additional skills on C#/Matlab/HTML/JavaScript programming
 }
 
 body {
-  background-color: #474e5d;
+  background-color: white;
   font-family: Helvetica, sans-serif;
 }
 
@@ -56,7 +56,7 @@ body {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: white;
+  background-color: yellow;
   border: 4px solid #FF9F55;
   top: 15px;
   border-radius: 50%;
