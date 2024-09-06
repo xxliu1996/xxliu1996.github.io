@@ -133,3 +133,103 @@ img_filtered = gaussian_filtering(img_gray, kernel_size = 3)
 
 第二步，用 Sobel 算子计算图像的水平和垂直方向的梯度。下面是图像处理结果以及代码。
 <img src='/images/blog/2023-harris-corner-detection/corner-detection-5.png'>
+
+```python
+# calculate gradient with sobel operator
+def sobel_operator(img):
+  sobel_x = 1/8 * np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+  sobel_y = 1/8 * np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
+
+  padding_size = 1
+  img_padding = padding_img(img, padding_size)
+  
+  img_h_gradient = np.zeros_like(img)
+  img_v_gradient = np.zeros_like(img)
+
+  
+  for i in range(img.shape[0]):
+    for j in range(img.shape[1]):
+      img_h_gradient[i][j] = np.sum(np.multiply(img_padding[i: i + 3, j: j + 3], sobel_x))
+      img_v_gradient[i][j] = np.sum(np.multiply(img_padding[i: i + 3, j: j + 3], sobel_y))
+
+  # dx = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=3)
+  # dy = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=3)
+  
+  return (img_h_gradient, img_v_gradient)
+(img_h_gradient, img_v_gradient) = sobel_operator(img_filtered)
+```
+
+第三步，对于图像中的每个像素，计算Harris矩阵$$$$和函数值$$$$，选定合适的阈值，保留包含角点的区域。下面是处理后的图像和代码。
+<img src='/images/blog/2023-harris-corner-detection/corner-detection-6.png'>
+
+```python
+## Calculate Harris Matrix and Response function
+def calculate_harris_response(img_h_gradient, img_v_gradient, k, window_size = 3):
+
+  response_matrix = np.zeros_like(img_h_gradient)
+
+  padding_size = int(window_size/2)
+  img_h_gradient_padding = padding_img(img_h_gradient, padding_size)
+  img_v_gradient_padding = padding_img(img_v_gradient, padding_size)
+
+  for i in range(response_matrix.shape[0]):
+    for j in range(response_matrix.shape[1]):
+      matrix_a = np.array([[np.sum(np.multiply(img_h_gradient_padding[i: i + window_size, j: j + window_size], img_h_gradient_padding[i: i + window_size, j: j + window_size])), 
+                            np.sum(np.multiply(img_h_gradient_padding[i: i + window_size, j: j + window_size], img_v_gradient_padding[i: i + window_size, j: j + window_size]))], 
+                           [np.sum(np.multiply(img_h_gradient_padding[i: i + window_size, j: j + window_size], img_v_gradient_padding[i: i + window_size, j: j + window_size])), 
+                            np.sum(np.multiply(img_v_gradient_padding[i: i + window_size, j: j + window_size], img_v_gradient_padding[i: i + window_size, j: j + window_size]))]])
+      
+      response_matrix[i][j] = np.linalg.det(matrix_a) - k * (np.matrix.trace(matrix_a)**2)
+
+  return response_matrix
+
+response_matrix = calculate_harris_response(img_h_gradient, img_v_gradient, 0.04)
+
+cv2.normalize(response_matrix, response_matrix, 0, 1, cv2.NORM_MINMAX)
+
+response_thresh = 0.5
+response_matrix_thres = np.copy(response_matrix)
+response_matrix_thres[response_matrix_thres < response_thresh] = 0
+```
+
+第四步，对所得的角点区域进行非极大值抑制处理。简单地说，我们在上一步会得到一系列孤立的区域，如图五中的白点所示，我们需要进一步把每个白点区域中的极大值点找到，将该点作为最终角点。下面是图像处理结果以及代码。
+<img src='/images/blog/2023-harris-corner-detection/corner-detection-7.png'>
+
+```python
+## Non-maximal suppression to get the final corner pixels
+## Divide the input response matirx map into grids, find 
+# the local maximal pixel for each grid, add it to the corner list
+
+def localmax_loc(response_patch, threshold, offset):
+  max_pixel = np.max(response_patch)
+  if max_pixel > threshold:
+    max_ind = np.where(response_patch == max_pixel)
+    max_ind = list(max_ind)
+    for i in range(len(max_ind)):
+      max_ind[i] = max_ind[i] + offset
+    return max_ind
+  else:
+    return None
+
+def nms_corners(response_matrix, window_size = 7):
+  grid_size = [int(response_matrix.shape[0]/window_size), int(response_matrix.shape[1]/window_size)]
+  corner_ind = []
+  for i in range(grid_size[0] + 1):
+    for j in range(grid_size[1] + 1):
+      loc = localmax_loc(response_matrix[i*window_size: (i + 1)*window_size, j*window_size: (j + 1)*window_size],
+                   0.2, np.array([i*window_size, j*window_size]))
+      if loc is not None:
+        corner_ind.append(loc[0])
+
+  return corner_ind
+
+# from itertools import chain
+corner_ind = nms_corners(response_matrix_thres)
+print(f'{len(corner_ind)} corners detected')
+
+img_path = '/path/to/image'
+img_rgb = cv2.imread(img_path)
+img_corner = np.copy(img_rgb)
+for corner in corner_ind:
+  cv2.circle(img_corner,(corner[1],corner[0]),2,(0,255,0))
+```
