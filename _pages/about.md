@@ -13,6 +13,10 @@ My research lies in surgical navigation, deep learning, computer vision, medical
 Also, I have devloped additional skills on C#/Matlab/HTML/JavaScript programming, Unity game development, using 3D Slicer/ImageJ to process medical images, 3D CAD design, 3D printing, etc. 
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 .timeline {
   position: relative;
   max-width: 1200px;
