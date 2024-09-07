@@ -77,6 +77,7 @@ $$P = \frac{TP}{TP + FP}$$， $$R = \frac{TP}{TP + FN}$$
 <img src='/images/blog/2024-model-performance-evaluation/model-performance-evaluation-5.webp'>
 
 $$F1$$参数综合考量了查准率和查全率，它是二者的调和平均值，定义如下：
+
 $$F1 = \frac{2 \times P \times R}{P + R} = \frac{2 \times TP }{ 样例总数 + TP - TN}$$
 
 一般地，$$F1$$越大，则学习器的性能越好。
