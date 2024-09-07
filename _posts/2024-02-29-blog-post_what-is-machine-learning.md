@@ -7,7 +7,7 @@ tags:
   - 西瓜书
   - 算法
 ---
-<img src='/images/blog/2024-what-is-machine-learning/what-is-machine-learning-1.png'>
+<img src='/images/blog/2024-what-is-machine-learning/what-is-machine-learning-1.jpeg'>
 
 *本文主要内容，来自于本人在阅读周志华《机器学习》[1]这本书过程中，总结出来的重要知识点。*
 
@@ -67,3 +67,8 @@ tags:
 |二十一世纪以来	|深度学习	|神经网络|
 
 近年来，深度学习成为机器学习的主流方法。最主要的推动因素就是海量数据的产生以及计算能力的大幅增强。深度学习在图像、语音、文字处理和分析等方面均取得了重大的进展。
+
+参考
+======
+[1] 周志华《机器学习》
+[2] Dartmouth Workship https://en.wikipedia.org/wiki/Dartmouth_workshop
