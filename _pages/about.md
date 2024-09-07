@@ -164,13 +164,13 @@ News
       <p>Xingxing Liu just finished his first internship at Phillips North America locating at Boston, MA.</p>
     </div>
   </div>
-  <div class="container right">
+  <div class="container left">
     <div class="content">
       <h2>2019-08-12</h2>
       <p>Xingxing Liu just joined University of Iowa as a Ph.D. student at department of Electrical and Computer Engineering.</p>
     </div>
   </div>
-  <div class="container left">
+  <div class="container right">
     <div class="content">
       <h2>2019-06-30</h2>
       <p>Xingxing Liu just graduated from University of Science and Technology of China.</p>
