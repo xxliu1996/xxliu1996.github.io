@@ -80,3 +80,39 @@ $$F1$$参数综合考量了查准率和查全率，它是二者的调和平均�
 $$F1 = \frac{2 \times P \times R}{P + R} = \frac{2 \times TP }{ 样例总数 + TP - TN}$$
 
 一般地，$$F1$$越大，则学习器的性能越好。
+
+$$ROC$$与$$AUC$$
+------
+$$ROC$$（Receiver Operating Characteristic）曲线的生成与$$P−R$$曲线类似，先根据学习器的预测结果对样本进行排序，按此顺序逐个把样本作为正例进行预测，每次计算出真正例率（ True Positive Rate，TPR）和假正例率（ False Positive Rate，FPR），并分别以它们作为纵坐标、横坐标得到一系列的点，把这些点依次相连便得到了$$ROC$$曲线。 显示$$ROC$$曲线的图即为$$ROC$$图。TPR和FPR的计算公式如下：
+
+$$TPR = \frac{TP}{TP + FN}$$
+
+$$FPR = \frac{FP}{TN + FP}$$
+
+若有足够多的样本，$$ROC$$曲线应当是平滑的，而对于有限样本，$$ROC$$曲线的是由一系列横纵线段连接而成的。对于一个样本集，它包含$$m^+$$个正例和$$m^-$$个反例，根据学习器预测结果对样例进行排序，然后把分类阈值设为最大，即把所有样例均预测为反例，此时真正例率和假正例率均为0，在坐标$$(0,0)$$处标记一个点。然后，将分类阈值依次设为每个样例的预测值，即依次将每个样例划分为正例。设前一个标记点坐标为$$(X,Y)$$，当前若为真正例，则对应标记点的坐标为$$(x, y + \frac{1}{m^+})$$，当前若为假正例，则对应标记点的坐标为$$(x + \frac{1}{m^-}, y )$$，然后用线段连接相邻点即得。下图显示了两个$$ROC$$曲线，分别对应无穷样本和有限样本的情形。
+
+<img src='/images/blog/2024-model-performance-evaluation/model-performance-evaluation-6.webp'>
+
+有了$$ROC$$曲线，如何用它来衡量学习器的性能呢？$$ROC$$曲线覆盖的面积，即$$AUC$$（Area Under ROC Curve）就是一个很好的度量。对于由有限样本生成的$$ROC$$曲线，$$AUC$$的计算公式如下：
+$$AUC = \frac{1}{2}\sum_{i=1}^{m-1}{(x_{i+1} - x_i)(y_i + y_{i+1})}$$
+
+代价敏感错误率与代价曲线
+------
+在现实任务中常会遇到这样的情况：不同类型的错误所造成的后果不同。例如在医疗诊断中，错误地把患者诊断为健康人与错误地把健康人诊断为患者，看起来都是犯了“一次错误”，但后者的影响是增加了进一步检查的麻烦，前者的后果却可能是丧失了拯救生命的最佳时机；再如，门禁系统错误地把可通行人员拦在门外，将使得用户体验不佳，但错误地把陌生人放进门内，则会造成严重的安全事故。为权衡不同类型错误所造成的不同损失，可为错误赋予“非均等代价”(unequal cost)。以二分类任务为例，我们可以设定一个“代价矩阵”(cost matrix)，如下图所示，其中$$cost_{ij}$$表示将第$$i$$类样本预测为第$$j$$类样本的代价。
+
+<img src='/images/blog/2024-model-performance-evaluation/model-performance-evaluation-7.webp'>
+
+于是，学习的目标就变成最小化总体代价。对于二分类问题，假设第0类为正类别，第1类作为反类，令$$D^+$$与$$D^-$$分别代表样本集 $$D$$中正例子集与反类子集，则代价敏感（cost-sensitive）错误率为：
+$$E(f;D;cost) = \frac{1}{m}(\sum_{x_i\in D^+}{II(f(x_i) \ne y_i)\times cost_{01}} + \sum_{x_i\in D^-}{II(f(x_i) \ne y_i)\times cost_{10}})$$
+
+在非均等代价下，我们不能直接用$$ROC$$曲线来判断学习器的性能，而要用代价曲线（cost curve）。代价曲线的横轴为正例概率代价：
+$$P(+)cost = \frac{p \times cost_{01}}{p \times cost_{01} + (1-p)\times cost_{10}}$$
+
+这里$$p$$是正例样本所占的比率，纵轴是归一化代价：
+$$cost_{norm} = \frac{FNR \times p \times cost_{01} + FPR \times (1-p)\times cost_{10}}{p \times cost_{01} + (1-p)\times cost_{10}} = FNR \times P(+)cost + FPR \times (1 - P(+)cost)$$
+
+期中FPR是前面定义过的假正例率，而$$FNR = 1 - TPR$$，是假反例率。
+
+代价曲线的绘制很简单：$$ROC$$曲线上每一点对应了代价平面上的一条线段，设$$ROC$$曲线上点的坐标为$$（FPR， TPR）$$，则可相应计算出FNR，然后在代价平面上绘制一条从$$（0， FPR）$$到$$（1，FNR）$$的线段，线段下的面积即表示了该条件下的期望总体代价；如此将$$ROC$$曲线上的每个点转化为代价平面上的一条线段，然后取所有线段的下界，围成的面积即为在所有条件下学习器的期望总体代价。
+
+<img src='/images/blog/2024-model-performance-evaluation/model-performance-evaluation-8.webp'>
