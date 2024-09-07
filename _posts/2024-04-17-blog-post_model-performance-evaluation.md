@@ -7,7 +7,7 @@ tags:
   - 西瓜书
   - 算法
 ---
-<img src='/images/blog/2024-model-performance-evaluation/model-performance-evaluation-1.jpeg'>
+<img src='/images/blog/2024-model-performance-evaluation/test.jpeg'>
 
 *本文主要内容，来自于本人在阅读周志华《机器学习》[1]这本书过程中，总结出来的重要知识点。*
 
