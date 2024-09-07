@@ -94,6 +94,7 @@ $$FPR = \frac{FP}{TN + FP}$$
 <img src='/images/blog/2024-model-performance-evaluation/model-performance-evaluation-6.webp'>
 
 有了$$ROC$$曲线，如何用它来衡量学习器的性能呢？$$ROC$$曲线覆盖的面积，即$$AUC$$（Area Under ROC Curve）就是一个很好的度量。对于由有限样本生成的$$ROC$$曲线，$$AUC$$的计算公式如下：
+
 $$AUC = \frac{1}{2}\sum_{i=1}^{m-1}{(x_{i+1} - x_i)(y_i + y_{i+1})}$$
 
 代价敏感错误率与代价曲线
@@ -103,12 +104,15 @@ $$AUC = \frac{1}{2}\sum_{i=1}^{m-1}{(x_{i+1} - x_i)(y_i + y_{i+1})}$$
 <img src='/images/blog/2024-model-performance-evaluation/model-performance-evaluation-7.webp'>
 
 于是，学习的目标就变成最小化总体代价。对于二分类问题，假设第0类为正类别，第1类作为反类，令$$D^+$$与$$D^-$$分别代表样本集 $$D$$中正例子集与反类子集，则代价敏感（cost-sensitive）错误率为：
+
 $$E(f;D;cost) = \frac{1}{m}(\sum_{x_i\in D^+}{II(f(x_i) \ne y_i)\times cost_{01}} + \sum_{x_i\in D^-}{II(f(x_i) \ne y_i)\times cost_{10}})$$
 
 在非均等代价下，我们不能直接用$$ROC$$曲线来判断学习器的性能，而要用代价曲线（cost curve）。代价曲线的横轴为正例概率代价：
+
 $$P(+)cost = \frac{p \times cost_{01}}{p \times cost_{01} + (1-p)\times cost_{10}}$$
 
 这里$$p$$是正例样本所占的比率，纵轴是归一化代价：
+
 $$cost_{norm} = \frac{FNR \times p \times cost_{01} + FPR \times (1-p)\times cost_{10}}{p \times cost_{01} + (1-p)\times cost_{10}} = FNR \times P(+)cost + FPR \times (1 - P(+)cost)$$
 
 期中FPR是前面定义过的假正例率，而$$FNR = 1 - TPR$$，是假反例率。
