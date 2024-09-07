@@ -55,9 +55,9 @@ $$E(f; D) = \frac{1}{m} \sum^{m}_{i = 1}{(f(x_i) - y_i)}^2$$
 ------
 错误率是分类错误的样本数占样本总数的比例，而精度则是分类正确的样本数占样本总数的比例。即有：
 
-$$E(f; D) = \frac{1}{m} \sum^{m}_{i = 1}{{II(f(x_i) \ne y_i)}}$$
+$$E(f; D) = \frac{1}{m} \sum^{m}_{i = 1}{II(f(x_i) \ne y_i)}$$
 
-$$acc(f; D) = \frac{1}{m} \sum^{m}_{i = 1}{{II(f(x_i) = y_i)}} = 1 - E(f; D)$$
+$$acc(f; D) = \frac{1}{m} \sum^{m}_{i = 1}{II(f(x_i) = y_i)} = 1 - E(f; D)$$
 
 这里$$II(true) = 1$$， $$II(false) = 0$$。
 
