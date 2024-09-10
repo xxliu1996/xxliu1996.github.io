@@ -14,4 +14,4 @@ tags:
 
 |题号|题目标题|题目介绍|解题思路|详解|
 |---|-------|------|-------|----|
-|1|赋值运算符函数|<img src='/images/blog/2024-model-performance-evaluation/model-performance-evaluation-1.jpeg'>|||
+|1|赋值运算符函数|<img src='/images/blog/2024-coding-interview-questions-summary/problem-1.jpeg'>|||
