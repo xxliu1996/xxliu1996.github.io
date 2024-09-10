@@ -14,4 +14,4 @@ tags:
 
 |题号|题目标题|题目介绍|解题思路|详解|
 |---|-------|------|-------|----|
-|1|赋值运算符函数|在一个类定义中定义函数”=“|||
+|1|赋值运算符函数|<img src='/images/blog/2024-model-performance-evaluation/model-performance-evaluation-1.jpeg'>|||
