@@ -160,8 +160,20 @@ News
   </div>
   <div class="container right">
     <div class="content">
-      <h2>2019-08-12</h2>
+      <h2>2023-10-10</h2>
+      <p>Xingxing Liu just passed the Ph.D. comprehensive exam.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2023-08-25</h2>
       <p>Xingxing Liu just finished his first internship at Phillips North America locating at Boston, MA.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2020-10-13</h2>
+      <p>Xingxing Liu just passed the Ph.D. qualification exam.</p>
     </div>
   </div>
   <div class="container left">
