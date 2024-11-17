@@ -26,5 +26,10 @@ tags:
 |9|236|Lowest Common Ancestor of a Binary Tree|[Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)|求二叉树中两个节点p和q的最低共同祖先节点。|最小公共子节点拥有一个特性：其左右子树分别包含p和q。所以，首先判断当前节点是不是p或者q中的一个，如果是，则返回当前节点。否则，判断当前节点左右子树分别包含p和q，如果是，则当前节点即为p和q最低共同祖先。||
 |10|938|Range Sum of BST|[Link](https://leetcode.com/problems/range-sum-of-bst/description/)|求二叉树中节点值位于给定范围内的和。|遍历树中每个节点（深度优先，广度优先，前/后/中序遍历），判断节点值是否位于给定范围，若是，则加到最终的结果中去。||
 |11|528|Random Pick with Weight|[Link](https://leetcode.com/problems/random-pick-with-weight/description/)|给定一个权重数组，数组每个值代表当前位置的权重。部署一个随机选择位置的函数，每个位置被选中的几率正比于该位置的权重。|求权重数组的累积分布函数(Cumulative Distribution Function)。然后，在1和权重和之间随机生成一个数，生成的随机数在cdf中的所处位置就是应该返回的位置。在cdf中查找随机数的时候，要用二分法查找。||
+|12|71|Simplify Path|[Link](https://leetcode.com/problems/simplify-path/description/)|简化表示unix路径的字符串。|用'/'将字符串分割为list，遍历这个list，如果元素是'.'或''，直接删除，如果是'..'，则删除当前元素和上一个元素（注意遍历下标的变化）。最后用'/'将list中的字符串连接起来，返回。||
+|13|1091|Shortest Path in Binary Matrix|[Link](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/)|给定一个grid，由0和1组成，求从grid左上角到右下角最短路径。要求路径上的元素均为0。|运用队列，广度优先遍历grid中的0元素点，每一层路径节点数加1，直到访问到右下角节点，返回路径长度。||
+|13|1091|Shortest Path in Binary Matrix|[Link](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/)|给定一个grid，由0和1组成，求从grid左上角到右下角最短路径。要求路径上的元素均为0。|运用队列，广度优先遍历grid中的0元素点，每一层路径节点数加1，直到访问到右下角节点，返回路径长度。||
+|14|199|Binary Tree Right Side View|[Link](https://leetcode.com/problems/binary-tree-right-side-view/description/)|求一个二叉树从其右方看到的数从上到下组成的数组。|递归法：分别求左右子树的从右方看到的数组，然后比较其结果，生成最终结果（右子树结果会遮挡左子树结果）。或者广度优先遍历树，每一层最后一个元素即为该层从右方看到的结果。||
+|15|1570|Dot Product of Two Sparse Vectors|[Link](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/description/)|存储稀疏矩阵，并且创造求稀疏矩阵内积的函数。|用directionary存储稀疏矩阵，key是位置，value是数值。求内积的时候，相同key的value乘积。注意遍历长度较小的directionary。||
 
 
