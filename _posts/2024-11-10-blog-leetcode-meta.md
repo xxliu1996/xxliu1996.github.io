@@ -23,4 +23,8 @@ tags:
 |6|314|Binary Tree Vertical Order Traversal|[Link](https://leetcode.com/problems/binary-tree-vertical-order-traversal/description/)|一个二叉树，返回垂直检索序列。返回的是一个链表，链表每个元素是同一列的元素，并且按照从上到下排列。|前序遍历二叉树，给每个node分配（row, column）表示其位置，并且按照column位key放入一个dictionary中。然后按照key从小到大输出元素，每个元素均为处于同一column的数字链表。（递归）||
 |7|339|Nested List Weight Sum|[Link](https://leetcode.com/problems/nested-list-weight-sum/description/)|一个新定义的类 NestedInteger，包含一些API。一个NestedInteger可能只包含一个整数，也可能是一个包含整数的链表。求每个整数与其在链表中深度的乘积和。|深度优先遍历链表，对于每个元素，若为只包含一个整数的NestedInteger，则加上weighted number，否则进入调用深度优先函数，进入下一层链表。（递归）||
 |8|1650|Lowest Common Ancestor of a Binary Tree III|[Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/description/)|一个二叉树，每个节点不仅包含值、指向左右子树的指针，还包含其指向其父母的指针。求两个节点的最小共同祖先。|假设两个节点分别为p和q，二叉树的根节点为root，p和q的最小共同祖先为target，那么路径p->root->q->target和q->root->p->target的长度是相同的。所以根据这个思路，可以从p和q向上溯源，知道访问到target节点。（注意循环中有可能已经访问到target节点了）||
+|9|236|Lowest Common Ancestor of a Binary Tree|[Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)|求二叉树中两个节点p和q的最低共同祖先节点。|最小公共子节点拥有一个特性：其左右子树分别包含p和q。所以，首先判断当前节点是不是p或者q中的一个，如果是，则返回当前节点。否则，判断当前节点左右子树分别包含p和q，如果是，则当前节点即为p和q最低共同祖先。||
+|10|938|Range Sum of BST|[Link](https://leetcode.com/problems/range-sum-of-bst/description/)|求二叉树中节点值位于给定范围内的和。|遍历树中每个节点（深度优先，广度优先，前/后/中序遍历），判断节点值是否位于给定范围，若是，则加到最终的结果中去。||
+|11|528|Random Pick with Weight|[Link](https://leetcode.com/problems/random-pick-with-weight/description/)|给定一个权重数组，数组每个值代表当前位置的权重。部署一个随机选择位置的函数，每个位置被选中的几率正比于该位置的权重。|求权重数组的累积分布函数(Cumulative Distribution Function)。然后，在1和权重和之间随机生成一个数，生成的随机数在cdf中的所处位置就是应该返回的位置。在cdf中查找随机数的时候，要用二分法查找。||
+
 
