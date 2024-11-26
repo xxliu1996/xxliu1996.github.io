@@ -43,6 +43,6 @@ tags:
 |26|1762|Buildings With an Ocean View|[Link](https://leetcode.com/problems/buildings-with-an-ocean-view/description/)|一个数组代表一排从左至右楼房高度，求那些可以看到右边大海的房子。|从右至左遍历数组，记录当前最高楼的高度，若遇到更高的楼，则代表在该楼可以看到大海，并更新最高楼高度。||
 |27|56|Merge Intervals|[Link](https://leetcode.com/problems/merge-intervals/description/)|一个数组代表一排从左至右楼房高度，求那些可以看到右边大海的房子。|从右至左遍历数组，记录当前最高楼的高度，若遇到更高的楼，则代表在该楼可以看到大海，并更新最高楼高度。||
 |28|138|Copy List with Random Pointer|[Link](https://leetcode.com/problems/copy-list-with-random-pointer/description/)|给定一个链表，每个链表不仅包含值和指向next的指针，还有一个随机指针，指向链表中一个随机元素，或者指向空指针。复制该链表。|（1）构建一个hashmap，key是原node，value是复制的node。遍历链表，连接起每个节点对应的复制节点。（2）对于每个节点，复制一个节点，并将复制的节点插入原节点和其next节点之间。这样，奇数位置节点为原节点，偶数位置节点为复制节点。然后再遍历该链表，根据原节点的random指针指向，连接复制节点的random节点。第三次遍历链表，把原节点和复制节点拆分成两个链表。||
-|29|560|Subarray Sum Equals K|[Link](https://leetcode.com/problems/subarray-sum-equals-k/description/)|给定一个数组，求其子数组的个数，要求子数组和等于一个给定值k。|所谓子数组的和，其实就是数组cdf两项之差。所以构建一个以数组累和为key的hashmap，key对应的值为该类和出现的频次。遍历数组，更新类和，寻找子数组等于给定值的个数。||
+|29|560|Subarray Sum Equals K|[Link](https://leetcode.com/problems/subarray-sum-equals-k/description/)|给定一个数组，求其子数组的个数，要求子数组和等于一个给定值k。|所谓子数组的和，其实就是数组cdf两项之差。所以构建一个以数组累和为key的hashmap，key对应的值为该类和出现的频次。遍历数组，更新累和，寻找子数组等于给定值的个数。||
 
 
