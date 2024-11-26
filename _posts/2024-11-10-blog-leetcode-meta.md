@@ -48,5 +48,6 @@ tags:
 |<span style="color:red">31</span>|31|Next Permutation|[Link](https://leetcode.com/problems/next-permutation/description/)|看链接。|不懂。||
 |<span style="color:red">32</span>|1004|Max Consecutive Ones III|[Link](https://leetcode.com/problems/max-consecutive-ones-iii/description/)|给定一个只包含0和1的数组，可以将其中最多k个0变为1。在这种情况下，可以得到最长的连续为1的子数组长度。|滑动窗口。左右指针确定一个窗口，先固定左指针，向右移动右指针，同时统计窗口内0的个数，当0的个数不大于k时，可一直向右移动右指针。当窗口内0的个数大于k或者右指针超过数组长度时，可以统计窗口长度。移动左指针，重复这个操作，可以得到一些列的最长窗口长度。在这个过程中，记录最长窗口长度。||
 |33|346|Moving Average from Data Stream|[Link](https://leetcode.com/problems/moving-average-from-data-stream/description/)|部署一个数据结构，可以保存一序列数字。该序列有最大长度，超过最大长度时，需要去除头部元素后再插入尾部元素。插入元素时，需要返回插入后，序列的平均值。|保存当前序列的和以及长度（元素个数）可以方便计算序列平均值。||
-
+|34|129|Sum Root to Leaf Numbers|[Link](https://leetcode.com/problems/sum-root-to-leaf-numbers/description/)|一个二叉树，规定从根节点到叶子节点的数字串组成一个整数，求所有可能整数的和。|深度优先遍历树，同时将当前节点对应数字加到组成整数后面（num = num * 10 + val），当遍历到叶子节点时，把该整数值加到最终结果里面。||
+|35|347|Top K Frequent Elements|[Link](https://leetcode.com/problems/top-k-frequent-elements/description/)|给定一个数组和整数k，返回出现频率最高的k个数。|用一个hashmap来存储数字以及其出现的频次。根据这个hashmap来生成一个list，每个元素是一个二元tuple，第一个值为频次，第二个值为数字本身。用heapq构建栈，就可以得到出现频次最大的k个数字。||
 
