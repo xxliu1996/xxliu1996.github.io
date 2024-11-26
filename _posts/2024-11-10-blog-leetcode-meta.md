@@ -31,5 +31,9 @@ tags:
 |13|1091|Shortest Path in Binary Matrix|[Link](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/)|给定一个grid，由0和1组成，求从grid左上角到右下角最短路径。要求路径上的元素均为0。|运用队列，广度优先遍历grid中的0元素点，每一层路径节点数加1，直到访问到右下角节点，返回路径长度。||
 |14|199|Binary Tree Right Side View|[Link](https://leetcode.com/problems/binary-tree-right-side-view/description/)|求一个二叉树从其右方看到的数从上到下组成的数组。|递归法：分别求左右子树的从右方看到的数组，然后比较其结果，生成最终结果（右子树结果会遮挡左子树结果）。或者广度优先遍历树，每一层最后一个元素即为该层从右方看到的结果。||
 |15|1570|Dot Product of Two Sparse Vectors|[Link](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/description/)|存储稀疏矩阵，并且创造求稀疏矩阵内积的函数。|用directionary存储稀疏矩阵，key是位置，value是数值。求内积的时候，相同key的value乘积。注意遍历长度较小的directionary。||
+|16|88|Merge Sorted Array|[Link](https://leetcode.com/problems/merge-sorted-array/description/)|合并两个有序数组，结果存储到其中一个数组中。|从右向左依次比较两个数组的元素，大的那个被选中，存入合并后的数组中，并更新对应指针。注意其中一个数组可能向遍历完。||
+|17|50|Pow(x, n)|[Link](https://leetcode.com/problems/powx-n/description/)|利用普通运算符实现Pow(x, n)函数。|联想n的二进制形式，Pow(x, n)即是由x的一系列幂的乘积。如Pow(x, 10)，10 = b1010，则Pow(x, 10) = x^8 * x ^2。所以可以对n进行位运算，每次向右移动一位，x更新为对应的幂，当n二进制末尾为1的时候，结果乘以x的值。直到n位0为止。||
+|18|162|Find Peak Element|[Link](https://leetcode.com/problems/find-peak-element/description/)|找到数组中的一个峰，峰定义为数组元素比前后元素都大。同时规定，数组边界外为无限小。|二分查找。左右指针，分别从左往右、从右往左，向中间查找。每次查找中间元素，若该元素比临近元素大，则返回该元素位置。否则则有两种情况：（1）该中间元素不大于其右边元素，则待查找元素必位于右半部分；（2）该中间元素大于其右边元素（即不大于其左边元素），则待查找元素必位于左半部分。注意循环条件：left < right - 1。这样可以使得mid元素始终有邻近元素，同时可以处理数组长度小于3的情况。最后返回时要返回left和right中对以应元素大的那个。||
+|19|543|Diameter of Binary Tree|[Link](https://leetcode.com/problems/diameter-of-binary-tree/description/)|二叉树的直径为树中距离最远的连个节点之间的距离，注意这两个节点不一定要穿过根节点。。|定义一个计算每个节点深度的函数，该函数递归式地计算节点左右子树的深度，该节点深度则为左右子树深度较大值加1。在这个过程中，评估穿过每个节点的最长路径，即左右子树深度之和。遍历所有节点之后，即可得到最长路径的长度，即diameter。||
 
 
