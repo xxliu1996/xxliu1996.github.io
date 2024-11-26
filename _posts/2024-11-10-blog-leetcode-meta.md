@@ -41,5 +41,6 @@ tags:
 |23|791|Custom Sort String|[Link](https://leetcode.com/problems/custom-sort-string/description/)|给定一个字符串，和一个字符串order，按照order中字符顺序来排列字符串。|（1）按照order中字符，设定26个英文字母的顺序，按照这个顺序利用sort函数来排列字符串。（2）创建一个hashmap，统计字符串中每个字符的频率。然后遍历order字符串，如果字符在hashmap中，则按照频率扩展字符串。最后，再把没有在order中出现的字符附加上去。||
 |24|921|Minimum Add to Make Parentheses Valid|[Link](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/)|给定一个由左右括号组成的字符串，问最少添加多少额外的括号，使得该字符串是正确的括号组合。|两个变量left和right分别记录左右括号数量，遍历字符串，若为左括号，则left加1，若为右括号，若left大于0，则left减1，否则right加1。最后返回left+right。||
 |25|973|K Closest Points to Origin|[Link](https://leetcode.com/problems/k-closest-points-to-origin/description/)|给定一系列二维点，返回k个离原点最近的点。|k最小值问题。可以用栈来解决，也可用快速选择来解决。用栈，可以用heapq模块，注意栈是最小栈，而且heapq支持元素为tuple或list，根据元素第一个值来构建栈。||
+|26|1762|Buildings With an Ocean View|[Link](https://leetcode.com/problems/buildings-with-an-ocean-view/description/)|一个数组代表一排从左至右楼房高度，求那些可以看到右边大海的房子。|从右至左遍历数组，记录当前最高楼的高度，若遇到更高的楼，则代表在该楼可以看到大海，并更新最高楼高度。||
 
 
