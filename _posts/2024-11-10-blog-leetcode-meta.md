@@ -44,5 +44,9 @@ tags:
 |27|56|Merge Intervals|[Link](https://leetcode.com/problems/merge-intervals/description/)|一个数组代表一排从左至右楼房高度，求那些可以看到右边大海的房子。|从右至左遍历数组，记录当前最高楼的高度，若遇到更高的楼，则代表在该楼可以看到大海，并更新最高楼高度。||
 |28|138|Copy List with Random Pointer|[Link](https://leetcode.com/problems/copy-list-with-random-pointer/description/)|给定一个链表，每个链表不仅包含值和指向next的指针，还有一个随机指针，指向链表中一个随机元素，或者指向空指针。复制该链表。|（1）构建一个hashmap，key是原node，value是复制的node。遍历链表，连接起每个节点对应的复制节点。（2）对于每个节点，复制一个节点，并将复制的节点插入原节点和其next节点之间。这样，奇数位置节点为原节点，偶数位置节点为复制节点。然后再遍历该链表，根据原节点的random指针指向，连接复制节点的random节点。第三次遍历链表，把原节点和复制节点拆分成两个链表。||
 |29|560|Subarray Sum Equals K|[Link](https://leetcode.com/problems/subarray-sum-equals-k/description/)|给定一个数组，求其子数组的个数，要求子数组和等于一个给定值k。|所谓子数组的和，其实就是数组cdf两项之差。所以构建一个以数组累和为key的hashmap，key对应的值为该类和出现的频次。遍历数组，更新累和，寻找子数组等于给定值的个数。||
+|30|426|Convert Binary Search Tree to Sorted Doubly Linked List|[Link](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/description/)|将一个二叉树转化为双向链表，且链表首尾要相互连接。|递归。对于一个节点，如果该节点无左右子树，则该节点组成的双向链表首尾均为该节点。定义一个函数，可以把二叉树转化为双向链表，同时返回该链表首尾节点。分别转化一个节点的左右子树，根据左右子树生成双向链表首尾来插入双亲节点。||
+|<span style="color:red">31</span>|31|Next Permutation|[Link](https://leetcode.com/problems/next-permutation/description/)|看链接。|不懂。||
+|<span style="color:red">32</span>|1004|Max Consecutive Ones III|[Link](https://leetcode.com/problems/max-consecutive-ones-iii/description/)|给定一个只包含0和1的数组，可以将其中最多k个0变为1。在这种情况下，可以得到最长的连续为1的子数组长度。|滑动窗口。左右指针确定一个窗口，先固定左指针，向右移动右指针，同时统计窗口内0的个数，当0的个数不大于k时，可一直向右移动右指针。当窗口内0的个数大于k或者右指针超过数组长度时，可以统计窗口长度。移动左指针，重复这个操作，可以得到一些列的最长窗口长度。在这个过程中，记录最长窗口长度。||
+|33|346|Moving Average from Data Stream|[Link](https://leetcode.com/problems/moving-average-from-data-stream/description/)|部署一个数据结构，可以保存一序列数字。该序列有最大长度，超过最大长度时，需要去除头部元素后再插入尾部元素。插入元素时，需要返回插入后，序列的平均值。|保存当前序列的和以及长度（元素个数）可以方便计算序列平均值。||
 
 
