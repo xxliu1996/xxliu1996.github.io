@@ -28,7 +28,6 @@ tags:
 |11|528|Random Pick with Weight|[Link](https://leetcode.com/problems/random-pick-with-weight/description/)|给定一个权重数组，数组每个值代表当前位置的权重。部署一个随机选择位置的函数，每个位置被选中的几率正比于该位置的权重。|求权重数组的累积分布函数(Cumulative Distribution Function)。然后，在1和权重和之间随机生成一个数，生成的随机数在cdf中的所处位置就是应该返回的位置。在cdf中查找随机数的时候，要用二分法查找。||
 |12|71|Simplify Path|[Link](https://leetcode.com/problems/simplify-path/description/)|简化表示unix路径的字符串。|用'/'将字符串分割为list，遍历这个list，如果元素是'.'或''，直接删除，如果是'..'，则删除当前元素和上一个元素（注意遍历下标的变化）。最后用'/'将list中的字符串连接起来，返回。||
 |13|1091|Shortest Path in Binary Matrix|[Link](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/)|给定一个grid，由0和1组成，求从grid左上角到右下角最短路径。要求路径上的元素均为0。|运用队列，广度优先遍历grid中的0元素点，每一层路径节点数加1，直到访问到右下角节点，返回路径长度。||
-|13|1091|Shortest Path in Binary Matrix|[Link](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/)|给定一个grid，由0和1组成，求从grid左上角到右下角最短路径。要求路径上的元素均为0。|运用队列，广度优先遍历grid中的0元素点，每一层路径节点数加1，直到访问到右下角节点，返回路径长度。||
 |14|199|Binary Tree Right Side View|[Link](https://leetcode.com/problems/binary-tree-right-side-view/description/)|求一个二叉树从其右方看到的数从上到下组成的数组。|递归法：分别求左右子树的从右方看到的数组，然后比较其结果，生成最终结果（右子树结果会遮挡左子树结果）。或者广度优先遍历树，每一层最后一个元素即为该层从右方看到的结果。||
 |15|1570|Dot Product of Two Sparse Vectors|[Link](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/description/)|存储稀疏矩阵，并且创造求稀疏矩阵内积的函数。|用directionary存储稀疏矩阵，key是位置，value是数值。求内积的时候，相同key的value乘积。注意遍历长度较小的directionary。||
 |16|88|Merge Sorted Array|[Link](https://leetcode.com/problems/merge-sorted-array/description/)|合并两个有序数组，结果存储到其中一个数组中。|从右向左依次比较两个数组的元素，大的那个被选中，存入合并后的数组中，并更新对应指针。注意其中一个数组可能向遍历完。||
@@ -42,5 +41,8 @@ tags:
 |24|921|Minimum Add to Make Parentheses Valid|[Link](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/)|给定一个由左右括号组成的字符串，问最少添加多少额外的括号，使得该字符串是正确的括号组合。|两个变量left和right分别记录左右括号数量，遍历字符串，若为左括号，则left加1，若为右括号，若left大于0，则left减1，否则right加1。最后返回left+right。||
 |25|973|K Closest Points to Origin|[Link](https://leetcode.com/problems/k-closest-points-to-origin/description/)|给定一系列二维点，返回k个离原点最近的点。|k最小值问题。可以用栈来解决，也可用快速选择来解决。用栈，可以用heapq模块，注意栈是最小栈，而且heapq支持元素为tuple或list，根据元素第一个值来构建栈。||
 |26|1762|Buildings With an Ocean View|[Link](https://leetcode.com/problems/buildings-with-an-ocean-view/description/)|一个数组代表一排从左至右楼房高度，求那些可以看到右边大海的房子。|从右至左遍历数组，记录当前最高楼的高度，若遇到更高的楼，则代表在该楼可以看到大海，并更新最高楼高度。||
+|27|56|Merge Intervals|[Link](https://leetcode.com/problems/merge-intervals/description/)|一个数组代表一排从左至右楼房高度，求那些可以看到右边大海的房子。|从右至左遍历数组，记录当前最高楼的高度，若遇到更高的楼，则代表在该楼可以看到大海，并更新最高楼高度。||
+|28|138|Copy List with Random Pointer|[Link](https://leetcode.com/problems/copy-list-with-random-pointer/description/)|给定一个链表，每个链表不仅包含值和指向next的指针，还有一个随机指针，指向链表中一个随机元素，或者指向空指针。复制该链表。|（1）构建一个hashmap，key是原node，value是复制的node。遍历链表，连接起每个节点对应的复制节点。（2）对于每个节点，复制一个节点，并将复制的节点插入原节点和其next节点之间。这样，奇数位置节点为原节点，偶数位置节点为复制节点。然后再遍历该链表，根据原节点的random指针指向，连接复制节点的random节点。第三次遍历链表，把原节点和复制节点拆分成两个链表。||
+|29|560|Subarray Sum Equals K|[Link](https://leetcode.com/problems/subarray-sum-equals-k/description/)|给定一个数组，求其子数组的个数，要求子数组和等于一个给定值k。|所谓子数组的和，其实就是数组cdf两项之差。所以构建一个以数组累和为key的hashmap，key对应的值为该类和出现的频次。遍历数组，更新类和，寻找子数组等于给定值的个数。||
 
 
