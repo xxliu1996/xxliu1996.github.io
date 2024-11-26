@@ -35,5 +35,9 @@ tags:
 |17|50|Pow(x, n)|[Link](https://leetcode.com/problems/powx-n/description/)|利用普通运算符实现Pow(x, n)函数。|联想n的二进制形式，Pow(x, n)即是由x的一系列幂的乘积。如Pow(x, 10)，10 = b1010，则Pow(x, 10) = x^8 * x ^2。所以可以对n进行位运算，每次向右移动一位，x更新为对应的幂，当n二进制末尾为1的时候，结果乘以x的值。直到n位0为止。||
 |18|162|Find Peak Element|[Link](https://leetcode.com/problems/find-peak-element/description/)|找到数组中的一个峰，峰定义为数组元素比前后元素都大。同时规定，数组边界外为无限小。|二分查找。左右指针，分别从左往右、从右往左，向中间查找。每次查找中间元素，若该元素比临近元素大，则返回该元素位置。否则则有两种情况：（1）该中间元素不大于其右边元素，则待查找元素必位于右半部分；（2）该中间元素大于其右边元素（即不大于其左边元素），则待查找元素必位于左半部分。注意循环条件：left < right - 1。这样可以使得mid元素始终有邻近元素，同时可以处理数组长度小于3的情况。最后返回时要返回left和right中对以应元素大的那个。||
 |19|543|Diameter of Binary Tree|[Link](https://leetcode.com/problems/diameter-of-binary-tree/description/)|二叉树的直径为树中距离最远的连个节点之间的距离，注意这两个节点不一定要穿过根节点。。|定义一个计算每个节点深度的函数，该函数递归式地计算节点左右子树的深度，该节点深度则为左右子树深度较大值加1。在这个过程中，评估穿过每个节点的最长路径，即左右子树深度之和。遍历所有节点之后，即可得到最长路径的长度，即diameter。||
+|20|146|LRU Cache|[Link](https://leetcode.com/problems/lru-cache/description/)|设计一个数据结构，遵循Least Recently Used (LRU) cache的规则。|(1) 利用collections.OrderedDict模块，保持插入键值的顺序。访问某个键时，获得对应的值后将该键移除后重新插入，使得它位于字典头部。插入键值时，如果存储空间满了，则需先移除字典尾部元素，再插入新键值。（2）如果不允许使用该模块，则可以利用双向链表实现，保存链表首尾，方便插入、删除。同时维持一个字典，可以快速访问键值。||
+|21|1|Two Sum|[Link](https://leetcode.com/problems/two-sum/description/)|给定一个数组，找到两个元素，其和为固定值target。|(1) 先把数组排序，然后利用双指针来寻找两个元素。（2）创建hashmap，键为元素值，值为元素位置。遍历数组，利用target和元素值来查询是否哈希表中已经有对应元素了。||
+|22|125|Valid Palindrome|[Link](https://leetcode.com/problems/valid-palindrome/description/)|判断一个字符串中的英文字符组成的字符串是否是会问字符。|首位指针，对于非英文字符，跳过。英文字符则比较首位指针对应字符是否一致，不一致则不是回文字符串。注意一些字符串操作函数：lower，isalnum等。||
+|23|791|Custom Sort String|[Link](https://leetcode.com/problems/custom-sort-string/description/)|给定一个字符串，和一个字符串order，按照order中字符顺序来排列字符串。|（1）按照order中字符，设定26个英文字母的顺序，按照这个顺序利用sort函数来排列字符串。（2）创建一个hashmap，统计字符串中每个字符的频率。然后遍历order字符串，如果字符在hashmap中，则按照频率扩展字符串。最后，再把没有在order中出现的字符附加上去。||
 
 
