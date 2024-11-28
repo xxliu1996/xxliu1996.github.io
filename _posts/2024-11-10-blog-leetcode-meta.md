@@ -53,4 +53,6 @@ tags:
 |36|23|Merge k Sorted Lists|[Link](https://leetcode.com/problems/merge-k-sorted-lists/description/)|把k个排好序的链表合并，合并后的链表也要是有序的。|部署一个函数用来合并两个链表。在合并链表时采取归并法，减少调用合并函数的次数。如果将链表中的n个链表从左至右依次合并，需要调用n-1次合并函数。但是如果采取归并的方法，则大概只需调用log（n）次合并函数。 ||
 |37|670|Maximum Swap|[Link](https://leetcode.com/problems/maximum-swap/description/)|对于一个正整数，你最多可以调换其中两位数字的位置。这样操作可以得到的最大整数是多少。|从左至右遍历每一位数，直到数字不是降序，设第i位数字是降序序列的最后一个数。则可把该整数划分为两部分：前半部分由前i+1个数字组成，后半部分数字组成第二部分。则在后半部分找到最大且位于靠后位置的数字，将其与前半部分比它小的最高位数字交换，即可得到结果。||
 |38|986|Interval List Intersections|[Link](https://leetcode.com/problems/interval-list-intersections/description/)|两个list，分别包含一系列的间隔，每个间隔由起点和终点组成。求这些间隔的重叠部分。|双指针，分别指向两个队列中的间隔。如果当前指针指向的两个间隔有重叠则把重叠部分放到结果中。双指针的更新只和指针指向的两个间隔的终点有关。||
+|39|863|All Nodes Distance K in Binary Tree|[Link](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|给定一个二叉树和其中一个节点，求所有距离该节点k长度的节点的值的集合。|递归。首先需要知道所有节点的双亲节点，所以可以用一个hashmap，从根节点递归遍历每个节点，然后把每个节点与其对应的双亲节点存入hashmap中。然后从目标节点target开始，广度优先遍历二叉树，每向外走一步，距离就增大一步。遍历二叉树时，如果距离等于k则把改值存入结果中。在遍历时，需要一个visited集合，来存储已经访问过的节点。||
+|40|1539|Kth Missing Positive Number|[Link](https://leetcode.com/problems/kth-missing-positive-number/description/)||||
 
