@@ -50,4 +50,7 @@ tags:
 |33|346|Moving Average from Data Stream|[Link](https://leetcode.com/problems/moving-average-from-data-stream/description/)|部署一个数据结构，可以保存一序列数字。该序列有最大长度，超过最大长度时，需要去除头部元素后再插入尾部元素。插入元素时，需要返回插入后，序列的平均值。|保存当前序列的和以及长度（元素个数）可以方便计算序列平均值。||
 |34|129|Sum Root to Leaf Numbers|[Link](https://leetcode.com/problems/sum-root-to-leaf-numbers/description/)|一个二叉树，规定从根节点到叶子节点的数字串组成一个整数，求所有可能整数的和。|深度优先遍历树，同时将当前节点对应数字加到组成整数后面（num = num * 10 + val），当遍历到叶子节点时，把该整数值加到最终结果里面。||
 |35|347|Top K Frequent Elements|[Link](https://leetcode.com/problems/top-k-frequent-elements/description/)|给定一个数组和整数k，返回出现频率最高的k个数。|用一个hashmap来存储数字以及其出现的频次。根据这个hashmap来生成一个list，每个元素是一个二元tuple，第一个值为频次，第二个值为数字本身。用heapq构建栈，就可以得到出现频次最大的k个数字。||
+|36|23|Merge k Sorted Lists|[Link](https://leetcode.com/problems/merge-k-sorted-lists/description/)|把k个排好序的链表合并，合并后的链表也要是有序的。|部署一个函数用来合并两个链表。在合并链表时采取归并法，减少调用合并函数的次数。如果将链表中的n个链表从左至右依次合并，需要调用n-1次合并函数。但是如果采取归并的方法，则大概只需调用log（n）次合并函数。 ||
+|37|670|Maximum Swap|[Link](https://leetcode.com/problems/maximum-swap/description/)|对于一个正整数，你最多可以调换其中两位数字的位置。这样操作可以得到的最大整数是多少。|从左至右遍历每一位数，直到数字不是降序，设第i位数字是降序序列的最后一个数。则可把该整数划分为两部分：前半部分由前i+1个数字组成，后半部分数字组成第二部分。则在后半部分找到最大且位于靠后位置的数字，将其与前半部分比它小的最高位数字交换，即可得到结果。||
+|38|986|Interval List Intersections|[Link](https://leetcode.com/problems/interval-list-intersections/description/)|两个list，分别包含一系列的间隔，每个间隔由起点和终点组成。求这些间隔的重叠部分。|双指针，分别指向两个队列中的间隔。如果当前指针指向的两个间隔有重叠则把重叠部分放到结果中。双指针的更新只和指针指向的两个间隔的终点有关。||
 
