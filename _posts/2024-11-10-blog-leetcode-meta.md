@@ -55,8 +55,7 @@ tags:
 |38|986|Interval List Intersections|[Link](https://leetcode.com/problems/interval-list-intersections/description/)|两个list，分别包含一系列的间隔，每个间隔由起点和终点组成。求这些间隔的重叠部分。|双指针，分别指向两个队列中的间隔。如果当前指针指向的两个间隔有重叠则把重叠部分放到结果中。双指针的更新只和指针指向的两个间隔的终点有关。||
 |39|863|All Nodes Distance K in Binary Tree|[Link](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|给定一个二叉树和其中一个节点，求所有距离该节点k长度的节点的值的集合。|递归。首先需要知道所有节点的双亲节点，所以可以用一个hashmap，从根节点递归遍历每个节点，然后把每个节点与其对应的双亲节点存入hashmap中。然后从目标节点target开始，广度优先遍历二叉树，每向外走一步，距离就增大一步。遍历二叉树时，如果距离等于k则把改值存入结果中。在遍历时，需要一个visited集合，来存储已经访问过的节点。||
 |40|1539|Kth Missing Positive Number|[Link](https://leetcode.com/problems/kth-missing-positive-number/description/)|给定一个严格递增正整数数组，和数组[1, 2, 3, ...]相比缺失一些数字，求缺失的第k个数字。|每个数字减去其位置（1开始）就是当前缺少的数字数。对此可以用二分查找法，找到缺失数字所在区间。||
-|41|133|Clone Graph|[Link](https://leetcode.com/problems/clone-graph/description/)|复制一个图，图由节点组成，每个节点包含一个指向其邻近节点的list。|深度优先遍历图，每访问一个节点，对其进行复制，同时存入一个
-hashmap中。hashmap的key是原节点，value是复制的节点。在遍历时即可把每个节点的邻近节点同时复制。要用一个set记录已经访问过的节点。||
+|41|133|Clone Graph|[Link](https://leetcode.com/problems/clone-graph/description/)|复制一个图，图由节点组成，每个节点包含一个指向其邻近节点的list。|深度优先遍历图，每访问一个节点，对其进行复制，同时存入一个 hashmap中。hashmap的key是原节点，value是复制的节点。在遍历时即可把每个节点的邻近节点同时复制。要用一个set记录已经访问过的节点。||
 |42|766|Toeplitz Matrix|[Link](https://leetcode.com/problems/toeplitz-matrix/description/)|判断矩阵的条对角线上的元素是否相等。|遍历除第一行和第一列的每个元素，如果出现a[i][j] != a[i - 1][j - 1]，则返回false，否则返回true。||
 |43|163|Missing Ranges|[Link](https://leetcode.com/problems/missing-ranges/description/)|在给定的范围内，寻找数组中缺失的数字间隔。|比较相邻数字，若相邻数字差1，则继续遍历，否则插入缺失的数字间隔。||
 
