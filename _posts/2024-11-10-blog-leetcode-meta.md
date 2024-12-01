@@ -58,4 +58,9 @@ tags:
 |41|133|Clone Graph|[Link](https://leetcode.com/problems/clone-graph/description/)|复制一个图，图由节点组成，每个节点包含一个指向其邻近节点的list。|深度优先遍历图，每访问一个节点，对其进行复制，同时存入一个 hashmap中。hashmap的key是原节点，value是复制的节点。在遍历时即可把每个节点的邻近节点同时复制。要用一个set记录已经访问过的节点。||
 |42|766|Toeplitz Matrix|[Link](https://leetcode.com/problems/toeplitz-matrix/description/)|判断矩阵的条对角线上的元素是否相等。|遍历除第一行和第一列的每个元素，如果出现a[i][j] != a[i - 1][j - 1]，则返回false，否则返回true。||
 |43|163|Missing Ranges|[Link](https://leetcode.com/problems/missing-ranges/description/)|在给定的范围内，寻找数组中缺失的数字间隔。|比较相邻数字，若相邻数字差1，则继续遍历，否则插入缺失的数字间隔。||
+|44|1047|Remove All Adjacent Duplicates In String|[Link](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/)|给定字符串若存在连续相同字符，则移除它们，移除后的字符串如果出现新的连续相同字符，也要移除。最后的结果不能包含连续相同字符。|用栈来处理。遍历字符串时，不断比较当前字符和栈顶字符，若相同，则出栈，否则进栈。||
+|45|958|Check Completeness of a Binary Tree|[Link](https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/)|给定一个二叉树，判断它是否是一个完全二叉树。|层序遍历二叉树，判断空节点之后是否有非空节点。是，则不是完全二叉树，否，则是完全二叉树。||
+|46|827|Making A Large Island|[Link](https://leetcode.com/problems/making-a-large-island/description/)|给定一个矩阵，由0和1组成，0代表大海，1代表陆地。连通（4-连通）的1组成一个个岛屿，在最多将一个0变为1的情况下，求能得到的最大岛屿面积。|遍历每个0，判断其周围是否有1。若是，则说明该0有可能连接周围的岛屿。对于周围存在1的0，对每个1寻找其所在的岛屿面积。在这个过程中，需要记录已经访问过的位置。最后看一看0的周围有几个岛屿可以被连接起来，所能得到的最大面积是多少。为了提高效率，要记录访问过的岛屿（一个dictionary，key是位置，value是所在岛屿的面积）。||
+|47|380|Insert Delete GetRandom O(1)|[Link](https://leetcode.com/problems/insert-delete-getrandom-o1/description/)|实现一个数据结构，主体是一个set。支持值的插入，删除，以及返回set中一个随机位置的值。|python set数据结构的使用。set.remove(a), set.add(a), random.choice(list(set))。||
+
 
