@@ -65,5 +65,8 @@ tags:
 |<span style="color:red">48</span>|76|Minimum Window Substring|[Link](https://leetcode.com/problems/minimum-window-substring/description/)|给定两个字符串s和t，求s的子串，使得t中所有字符（包含重复的）都包含在该子串中。求最短的字串。若没有，则返回空字符串。|滑动窗口。用一个Counter变量t_counter统计t中字符频数。用i，j来作为滑动窗口起止位置。在s[i-j]内的字符频数也用一个Counter变量统计。用一个变量matches来记录已经匹配的字符数目。当所有字符已经匹配时，记录当前长度，若比以前的结果小，更新结果。右移i，减小窗口长度，同时更新s_counter和matches。当未完全匹配时，右移j，更新s_counter和matches。||
 |<span style="color:red">49</span>|65|Valid Number|[Link](https://leetcode.com/problems/valid-number/description/)|判断一个给定字符串是不是一个有效的数字表示，字符串中包含['+', '-', 'e', 'E', '.', '0-9']|用四个布尔变量num，sign，exp，dec来分别代表数字，正负号，指数符号，小数点是否出现。遍历字符串，通过当前字符和四个布尔值的情况判断该字符串是否可以组成有效数字。例如，正负号出现以后，在没有遇到小数点或者指数符号之前，正负号不可以再次出现。遇到指数符号时，需要重置四个布尔变量。||
 |50|2|Add Two Numbers|[Link](https://leetcode.com/problems/add-two-numbers/description/)|两个链表，链表元素表示两个非负整数的数字，求这两个数的和，也用链表表示返回。|用变量carry表示进位。两个指针分别指向两个链表头指针。当两个指针有一个非空，或carry不为0时，执行循环。遍历链表每个数字，求和，根据和在结果链表中添加新节点并更新carry。用一个dummy指针会比较省事。循环结束后，需要判断carry是否为0，不为0则需要再添加一个节点。||
+|<span style="color:red">51</span>|282|Expression Add Operators|[Link](https://leetcode.com/problems/expression-add-operators/description/)||||
+|52|116|Populating Next Right Pointers in Each Node|[Link](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)|完美二叉树同一层的节点从左到右连城链表。|(1)层序遍历二叉树，用一个queue存储每一层节点，然后从左到右出queue，连接起来。（2）层序遍历二叉树，用queue存储每一层节点，连接queue队首节点的左右子节点，同时连接相邻节点的右左子树，用next连接。||
+
 
 
