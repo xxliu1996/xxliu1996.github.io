@@ -63,6 +63,7 @@ tags:
 |<span style="color:red">46</span>|827|Making A Large Island|[Link](https://leetcode.com/problems/making-a-large-island/description/)|给定一个矩阵，由0和1组成，0代表大海，1代表陆地。连通（4-连通）的1组成一个个岛屿，在最多将一个0变为1的情况下，求能得到的最大岛屿面积。|遍历每个0，判断其周围是否有1。若是，则说明该0有可能连接周围的岛屿。对于周围存在1的0，对每个1寻找其所在的岛屿面积。在这个过程中，需要记录已经访问过的位置。最后看一看0的周围有几个岛屿可以被连接起来，所能得到的最大面积是多少。为了提高效率，要记录访问过的岛屿（一个dictionary，key是位置，value是所在岛屿的面积）。[solution](https://leetcode.com/problems/making-a-large-island/solutions/1424229/python-3-dfs-96/)||
 |47|380|Insert Delete GetRandom O(1)|[Link](https://leetcode.com/problems/insert-delete-getrandom-o1/description/)|实现一个数据结构，主体是一个set。支持值的插入，删除，以及返回set中一个随机位置的值。|python set数据结构的使用。set.remove(a), set.add(a), random.choice(list(set))。||
 |<span style="color:red">48</span>|76|Minimum Window Substring|[Link](https://leetcode.com/problems/minimum-window-substring/description/)||||
-|<span style="color:red">49</span>|65|Valid Number|[Link](https://leetcode.com/problems/valid-number/description/)||||
+|<span style="color:red">49</span>|65|Valid Number|[Link](https://leetcode.com/problems/valid-number/description/)|判断一个给定字符串是不是一个有效的数字表示，字符串中包含['+', '-', 'e', 'E', '.', '0-9']|用四个布尔变量num，sign，exp，dec来分别代表数字，正负号，指数符号，小数点是否出现。遍历字符串，通过当前字符和四个布尔值的情况判断该字符串是否可以组成有效数字。例如，正负号出现以后，在没有遇到小数点或者指数符号之前，正负号不可以再次出现。遇到指数符号时，需要重置四个布尔变量。||
+|50|2|Add Two Numbers|[Link](https://leetcode.com/problems/add-two-numbers/description/)|两个链表，链表元素表示两个非负整数的数字，求这两个数的和，也用链表表示返回。|用变量carry表示进位。两个指针分别指向两个链表头指针。当两个指针有一个非空，或carry不为0时，执行循环。遍历链表每个数字，求和，根据和在结果链表中添加新节点并更新carry。用一个dummy指针会比较省事。循环结束后，需要判断carry是否为0，不为0则需要再添加一个节点。||
 
 
