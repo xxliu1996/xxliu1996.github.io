@@ -71,6 +71,10 @@ tags:
 |54|270|Closest Binary Search Tree Value|[Link](https://leetcode.com/problems/closest-binary-search-tree-value/description/)|给定一个二叉搜索树和一个浮点数target。求二叉搜索树中距离target最近的值，如果不止一个，则返回较小的那个。|递归法。判断根节点和target的大小，然后决定继续在左子树还是右子树继续寻找最近值。寻找到以后，再和根节点比较，看哪一个更近。||
 |55|415|Add Strings|[Link](https://leetcode.com/problems/add-strings/description/)|两个由数字组成的字符串分别代表两个正整数，求它们代表正整数的和，结果也要由字符串表示。不可使用直接把字符串转化为数字的内置函数。|从两个字符串的低位到高位，依次相加，同时考虑进位carry，最后的结果也用字符串表示。||
 |56|1216|Valid Palindrome III|[Link](https://leetcode.com/problems/valid-palindrome-iii/description/)|一个字符串最多移除k个字符，这样操作可以得到回文字符串吗？|||
+|57|1644|Lowest Common Ancestor of a Binary Tree II|[Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/description/)|求二叉树两个节点的共同祖先。这两个节点有可能不在二叉树中，这时，返回空。|递归。判断节点是否是空，等于其中一个节点。若等于其中一个节点，则需要对其左右子树继续查询，看看另一个节点是不是其子节点。对于一个节点，若两个节点分别位于其左右子树中，则该节点即为最小共同祖先。用两个布尔值来记录是否找到两个节点。||
+|58|169|Majority Element|[Link](https://leetcode.com/problems/majority-element/description/)|数组中有一个数字出现次数超过数组长度一半，找出该数字。|排序后，中间位置的数字即为所求数字。||
+
+
 
 
 
