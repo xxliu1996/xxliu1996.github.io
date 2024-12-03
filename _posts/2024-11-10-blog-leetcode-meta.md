@@ -70,6 +70,7 @@ tags:
 |<span style="color:red">53</span>|173|Binary Search Tree Iterator|[Link](https://leetcode.com/problems/binary-search-tree-iterator/description/)|给定一个二叉搜索树，如何有效地访问中序遍历的每个节点。|直观方法是创建数据结构时，直接把中序遍历节点按次序保存在一个list里面。但是，这样会很耗费空间。有效方法是用一个栈保存从根节点到最左边节点的所有左子树节点。则栈顶就是中序遍历第一个节点。每次指针向后移动一位，则栈顶节点出栈，同时把其右子树的左子节点依次入栈。[solution](https://leetcode.com/problems/binary-search-tree-iterator/solutions/52525/my-solutions-in-3-languages-with-stack/)||
 |54|270|Closest Binary Search Tree Value|[Link](https://leetcode.com/problems/closest-binary-search-tree-value/description/)|给定一个二叉搜索树和一个浮点数target。求二叉搜索树中距离target最近的值，如果不止一个，则返回较小的那个。|递归法。判断根节点和target的大小，然后决定继续在左子树还是右子树继续寻找最近值。寻找到以后，再和根节点比较，看哪一个更近。||
 |55|415|Add Strings|[Link](https://leetcode.com/problems/add-strings/description/)|两个由数字组成的字符串分别代表两个正整数，求它们代表正整数的和，结果也要由字符串表示。不可使用直接把字符串转化为数字的内置函数。|从两个字符串的低位到高位，依次相加，同时考虑进位carry，最后的结果也用字符串表示。||
+|56|1216|Valid Palindrome III|[Link](https://leetcode.com/problems/valid-palindrome-iii/description/)|一个字符串最多移除k个字符，这样操作可以得到回文字符串吗？|||
 
 
 
