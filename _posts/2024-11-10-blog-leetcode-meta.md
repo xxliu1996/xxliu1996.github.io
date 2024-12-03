@@ -75,7 +75,7 @@ tags:
 |58|169|Majority Element|[Link](https://leetcode.com/problems/majority-element/description/)|数组中有一个数字出现次数超过数组长度一半，找出该数字。|排序后，中间位置的数字即为所求数字。||
 |59|200|Number of Islands|[Link](https://leetcode.com/problems/number-of-islands/description/)|一个二维字符数组。数组中'1'代表陆地，'0'代表海洋。求在四连通的情况下，有多少个岛屿。|遍历数组，对于每个'1'，由其开始深度优先遍历grid，找到所有连接的'1'。访问过的'1'，变为'0'。若要求不能改变数组，则需要一个visited二维数组。||
 |60|219|Contains Duplicate II|[Link](https://leetcode.com/problems/contains-duplicate-ii/description/)|一个数组，判断是否存在两个相同的数，它们位置之差不大于k。|遍历数组时，用一个dictionary记录某个数字最近出现的位置。遍历到某个数字时，判断该数字是否在字典中，若在，判断当前位置和该数上次出现位置之差是否不大于k，若是，则返回True。每次都要更新字典。||
-|61|249|Group Shifted Strings|[Link](https://leetcode.com/problems/contains-duplicate-ii/description/)|一个数组，判断是否存在两个相同的数，它们位置之差不大于k。|遍历数组时，用一个dictionary记录某个数字最近出现的位置。遍历到某个数字时，判断该数字是否在字典中，若在，判断当前位置和该数上次出现位置之差是否不大于k，若是，则返回True。每次都要更新字典。||
+|61|249|Group Shifted Strings|[Link](https://leetcode.com/problems/group-shifted-strings/description/)|字符串中的字符允许整体平移（abcdef..z），在这种情况下把可以通过平移得到的字符串聚在一起。|可以通过平移得到的字符串有一个共性：相邻字符间的距离是固定的。所以可以用这个距离来编码，把编码相同的字符串聚集在一起。||
 
 
 
