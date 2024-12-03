@@ -73,6 +73,9 @@ tags:
 |56|1216|Valid Palindrome III|[Link](https://leetcode.com/problems/valid-palindrome-iii/description/)|一个字符串最多移除k个字符，这样操作可以得到回文字符串吗？|||
 |57|1644|Lowest Common Ancestor of a Binary Tree II|[Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/description/)|求二叉树两个节点的共同祖先。这两个节点有可能不在二叉树中，这时，返回空。|递归。判断节点是否是空，等于其中一个节点。若等于其中一个节点，则需要对其左右子树继续查询，看看另一个节点是不是其子节点。对于一个节点，若两个节点分别位于其左右子树中，则该节点即为最小共同祖先。用两个布尔值来记录是否找到两个节点。||
 |58|169|Majority Element|[Link](https://leetcode.com/problems/majority-element/description/)|数组中有一个数字出现次数超过数组长度一半，找出该数字。|排序后，中间位置的数字即为所求数字。||
+|59|200|Number of Islands|[Link](https://leetcode.com/problems/number-of-islands/description/)|一个二维字符数组。数组中'1'代表陆地，'0'代表海洋。求在四连通的情况下，有多少个岛屿。|遍历数组，对于每个'1'，由其开始深度优先遍历grid，找到所有连接的'1'。访问过的'1'，变为'0'。若要求不能改变数组，则需要一个visited二维数组。||
+|60|219|Contains Duplicate II|[Link](https://leetcode.com/problems/contains-duplicate-ii/description/)|一个数组，判断是否存在两个相同的数，它们位置之差不大于k。|遍历数组时，用一个dictionary记录某个数字最近出现的位置。遍历到某个数字时，判断该数字是否在字典中，若在，判断当前位置和该数上次出现位置之差是否不大于k，若是，则返回True。每次都要更新字典。||
+|61|249|Group Shifted Strings|[Link](https://leetcode.com/problems/contains-duplicate-ii/description/)|一个数组，判断是否存在两个相同的数，它们位置之差不大于k。|遍历数组时，用一个dictionary记录某个数字最近出现的位置。遍历到某个数字时，判断该数字是否在字典中，若在，判断当前位置和该数上次出现位置之差是否不大于k，若是，则返回True。每次都要更新字典。||
 
 
 
