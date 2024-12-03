@@ -76,6 +76,12 @@ tags:
 |59|200|Number of Islands|[Link](https://leetcode.com/problems/number-of-islands/description/)|一个二维字符数组。数组中'1'代表陆地，'0'代表海洋。求在四连通的情况下，有多少个岛屿。|遍历数组，对于每个'1'，由其开始深度优先遍历grid，找到所有连接的'1'。访问过的'1'，变为'0'。若要求不能改变数组，则需要一个visited二维数组。||
 |60|219|Contains Duplicate II|[Link](https://leetcode.com/problems/contains-duplicate-ii/description/)|一个数组，判断是否存在两个相同的数，它们位置之差不大于k。|遍历数组时，用一个dictionary记录某个数字最近出现的位置。遍历到某个数字时，判断该数字是否在字典中，若在，判断当前位置和该数上次出现位置之差是否不大于k，若是，则返回True。每次都要更新字典。||
 |61|249|Group Shifted Strings|[Link](https://leetcode.com/problems/group-shifted-strings/description/)|字符串中的字符允许整体平移（abcdef..z），在这种情况下把可以通过平移得到的字符串聚在一起。|可以通过平移得到的字符串有一个共性：相邻字符间的距离是固定的。所以可以用这个距离来编码，把编码相同的字符串聚集在一起。||
+|62|253|Meeting Rooms II|[Link](https://leetcode.com/problems/meeting-rooms-ii/description/)|给定一系列会议的起始时间，求最少需要分配多少个会议室。|核心在于用一个最小堆来存储已分配会议室的最早可用时间，即在该会议室举行会议的最晚时间。首先要把intervals数组排序，按照开始时间排序。||
+|63|498|Diagonal Traverse|[Link](https://leetcode.com/problems/diagonal-traverse/description/)|给定一个mxn的二维矩阵，求沿着45度对角方向遍历矩阵所得到的数列。|在45度对角线上的元素，横纵坐标是固定的，所以可以以它作为key来建立一个字典把在同一对角线上的元素聚合起来。在把这些元素合起来时，根据key的奇偶性来判定是否需要反转数列。||
+|64|647|Palindromic Substrings|[Link](https://leetcode.com/problems/palindromic-substrings/description/)|给定一个字符串，求该字符串有所少个回文子串。|回文字符串的查找需要从其中间向两边扩展寻找。所以遍历字符串每个位置i，分别以left = right = i和left = i, right = i + 1来扩展寻找回文子串。每当得到一个回文子串，count加1。||
+|65|987|Vertical Order Traversal of a Binary Tree|[Link](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/)|给定一个二叉树，给每个节点确定一个行数和列数(row， column)。规定从根节点开始，每个节点的左子节点行数加1，列数减1，右子节点，行数加1，列数加1。把该二叉树中的元素按照列数从小到大的顺序输出，同时同一列的元素聚在一起，按照行数排列。|先序遍历二叉树，用一个字典记录每个元素的值。其中，key是列数，value是节点值和行数。则遍历之后得到的字典就把在同一列的元素放在一起了。对于同一列的元素，则可以按照行数来排序输出。||
+|66|8|String to Integer (atoi)|[Link](https://leetcode.com/problems/string-to-integer-atoi/description/)|把字符串转化为数字，该字符串中包含一些无效字符，如空格，字母等。而且数字有可能超过32位整数，在这种情况下需要返回最大32位整数或最小32位整数。|用布尔值来控制是否继续读取字符。遇到数字时更新最终结果，可以直接与最大整数和最小整数比较：maxint = 2\**31 - 1，minint = -2\**31 - 1。||
+
 
 
 
