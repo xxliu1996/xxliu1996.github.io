@@ -81,6 +81,12 @@ tags:
 |64|647|Palindromic Substrings|[Link](https://leetcode.com/problems/palindromic-substrings/description/)|给定一个字符串，求该字符串有所少个回文子串。|回文字符串的查找需要从其中间向两边扩展寻找。所以遍历字符串每个位置i，分别以left = right = i和left = i, right = i + 1来扩展寻找回文子串。每当得到一个回文子串，count加1。||
 |65|987|Vertical Order Traversal of a Binary Tree|[Link](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/)|给定一个二叉树，给每个节点确定一个行数和列数(row， column)。规定从根节点开始，每个节点的左子节点行数加1，列数减1，右子节点，行数加1，列数加1。把该二叉树中的元素按照列数从小到大的顺序输出，同时同一列的元素聚在一起，按照行数排列。|先序遍历二叉树，用一个字典记录每个元素的值。其中，key是列数，value是节点值和行数。则遍历之后得到的字典就把在同一列的元素放在一起了。对于同一列的元素，则可以按照行数来排序输出。||
 |66|8|String to Integer (atoi)|[Link](https://leetcode.com/problems/string-to-integer-atoi/description/)|把字符串转化为数字，该字符串中包含一些无效字符，如空格，字母等。而且数字有可能超过32位整数，在这种情况下需要返回最大32位整数或最小32位整数。|用布尔值来控制是否继续读取字符。遇到数字时更新最终结果，可以直接与最大整数和最小整数比较：maxint = 2\**31 - 1，minint = -2\**31 - 1。||
+|67|9|Palindrome Number|[Link](https://leetcode.com/problems/palindrome-number/description/)|判断一个整数是否是回文数字（即从左到右和从右到左顺序排序的数字相等）。|计算数字从右到中间位的倒序数字，看看和原数字从左至中间位数组成的数字是否相等。||
+|68|14|Longest Common Prefix|[Link](https://leetcode.com/problems/palindrome-number/description/https://leetcode.com/problems/longest-common-prefix/description/)|给定一些字符串，找到它们最长公共前缀。|可以先将字符串数组排序，然后逐个比较相邻字符串，找到最长公共前缀。||
+|69|20|Valid Parentheses|[Link](https://leetcode.com/problems/valid-parentheses/description/)|由三种括号（'(){}[]'）组成的字符串，判定该字符串中的括号组合是否正确。|用栈判定所有括号是否成对。||
+|70|269|Alien Dictionary|[Link](https://leetcode.com/problems/alien-dictionary/description/)||||
+|71|283|Move Zeroes|[Link](https://leetcode.com/problems/move-zeroes/description/)|把数组中所有的0移到数组后部，非0元素的相对顺序要保持不变。|从右向左遍历数组，若当前元素为0，则将该元素移除，同时在数组末尾附加0。||
+
 
 
 
