@@ -86,6 +86,13 @@ tags:
 |69|20|Valid Parentheses|[Link](https://leetcode.com/problems/valid-parentheses/description/)|由三种括号（'(){}[]'）组成的字符串，判定该字符串中的括号组合是否正确。|用栈判定所有括号是否成对。||
 |70|269|Alien Dictionary|[Link](https://leetcode.com/problems/alien-dictionary/description/)||||
 |71|283|Move Zeroes|[Link](https://leetcode.com/problems/move-zeroes/description/)|把数组中所有的0移到数组后部，非0元素的相对顺序要保持不变。|从右向左遍历数组，若当前元素为0，则将该元素移除，同时在数组末尾附加0。||
+|<span style="color:red">72</span>|494|Target Sum|[Link](https://leetcode.com/problems/target-sum/description/)|给定一个非负整数数组，你可以在整数之间添加‘+’和‘-’来组成一个表达式。求所有可能的表达式，使得其结果等于target。返回这种表达式的数量。|递归方法。单纯递归法时间复杂度太高，需要用一个dictionary来保存中间的运算结构。||
+|73|735|Asteroid Collision|[Link](https://leetcode.com/problems/asteroid-collision/description/)|给定一个整数数组，数组中元素绝对值代表一个陨石的质量，正负代表方向：正数为向右，负数为向左。两颗相邻陨石，如果方向相反且相向运动，会发生碰撞。碰撞时，若二者质量相同，会一起爆炸，否则轻的陨石爆炸，重陨石方向和质量不变。求最终陨石的稳定状态。|用栈来遍历数组，比较当前陨石和栈顶元素的大小和符号，来决定是否入栈或者出栈。||
+|74|721|Accounts Merge|[Link](https://leetcode.com/problems/accounts-merge/description/)|给定一个list，list每个元素是字符串list。该字符串list的首个元素是用户名，其余元素是注册邮箱。注册邮箱重叠的用户可认为是相同用户，且相同用户的用户名相同。但是，用户名相同不保证是同一用户。把所有相同用户融合起来，去掉重复出现的邮箱。返回list中，每个list元素代表一个用户，用户之间不需排序，一个用户的邮箱要按照字符串排序结果排序。|用字典建立邮箱和用户index之间关系，即key是邮箱，value是使用该邮箱用户的index的集合。运用寻找连通域方法，找到同一个用户的所有index，并且融合它们。运用排序算法去除同一个用户的重复邮箱，并且对邮箱进行排序。||
+|75|636|Exclusive Time of Functions|[Link](https://leetcode.com/problems/exclusive-time-of-functions/description/)|对于一个单线程cpu，单独时刻只能运行一个函数。函数的开始和结束使用字符串保存的，例如‘0:start:0’表示函数0在0时刻开始，‘0:end:6’表示函数0在6时刻结束。给定所有的字符串，求每个函数的运行总时长。|函数调用是用栈来安排的，所以用一个栈来模拟函数调用开始、结束的情况。栈的每个元素表示函数id和已经运行时长。同时用一个字典来记录每个函数运行总时长。每次有函数开始和结束，都要记录其时刻，方便计算函数运行时长。通过对字符串的遍历，依旧函数的出栈、进栈、更新函数运行时长，即可得到所求结果。||
+|76|529|Minesweeper|[Link](https://leetcode.com/problems/minesweeper/description/)|扫雷游戏，根据规则去更新二维数组，直到扫到雷。|图的深度优先遍历。||
+|77|825|Friends Of Appropriate Ages|[Link](https://leetcode.com/problems/friends-of-appropriate-ages/description/)|给定一个正整数数组，每个元素代表一个人的年龄。每个人可以向别人发送好友请求，是否发送取决于二者的年龄，某人只会向满足一定年龄关系的人发送好友请求。求所有的好友请求数量。|统计每个年龄的频数，然后运用排列组合的方法计算朋友请求数目。在判定可以发送朋友请求之后，需要分两种情况：向同龄人发送，向不同龄的人发送。||
+|78|997|Squares of a Sorted Array|[Link](https://leetcode.com/problems/squares-of-a-sorted-array/description/)|给定一个整数数组，返回将每个整数取平方后形成数组的排序后的数组。|双指针。一个从左到右，一个从右到左，把平方值较大的数放入输出数组。||
 
 
 
