@@ -93,9 +93,14 @@ tags:
 |76|529|Minesweeper|[Link](https://leetcode.com/problems/minesweeper/description/)|扫雷游戏，根据规则去更新二维数组，直到扫到雷。|图的深度优先遍历。||
 |77|825|Friends Of Appropriate Ages|[Link](https://leetcode.com/problems/friends-of-appropriate-ages/description/)|给定一个正整数数组，每个元素代表一个人的年龄。每个人可以向别人发送好友请求，是否发送取决于二者的年龄，某人只会向满足一定年龄关系的人发送好友请求。求所有的好友请求数量。|统计每个年龄的频数，然后运用排列组合的方法计算朋友请求数目。在判定可以发送朋友请求之后，需要分两种情况：向同龄人发送，向不同龄的人发送。||
 |78|997|Squares of a Sorted Array|[Link](https://leetcode.com/problems/squares-of-a-sorted-array/description/)|给定一个整数数组，返回将每个整数取平方后形成数组的排序后的数组。|双指针。一个从左到右，一个从右到左，把平方值较大的数放入输出数组。||
-
-
-
+|<span style="color:red">79</span>|4|Median of Two Sorted Arrays|[Link](https://leetcode.com/problems/friends-of-appropriate-ages/description/)|给定连个排序好的整数数组，求它们合并后、排序后的数组的中位数。要求时间复杂度为对数级的。|||
+|80|34|Find First and Last Position of Element in Sorted Array|[Link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)|给定一个赠序整数数组，求某个数在数组中出现的最小、最大位置。|两次二分查找。分别找到该数的最小位置和最大位置。||
+|81|53|Maximum Subarray|[Link](https://leetcode.com/problems/maximum-subarray/description/)|求一个整数数组的子数组，使得该子数组的和最大。|两个数值，分别记录包含当前整数的子数组最大值和所有子数组的最大值。遍历完整个数组后，返回最大子数组和。||
+|82|78|Subsets|[Link](https://leetcode.com/problems/subsets/description/)|给定一个有不重复整数组成的数组，求其所有的子集。|DP。转换关系：已知i个数字组成数组的所有子集，新加一个数组，求这i+1个数字的所有子集。||
+|<span style="color:red">83</span>|126|Word Ladder II|[Link](https://leetcode.com/problems/word-ladder-ii/description/)|给定两个字符串beginWord和endWord，和一个字典wordList，在每次只能改变字符串中一个字符的情况下，求如何从beginWord转换到endWord，且中间字符串都要在wordList中。返回最短的转换路径。|||
+|84|523|Continuous Subarray Sum|[Link](https://leetcode.com/problems/continuous-subarray-sum/description/)|给定一个整数数组，求它是否存在一个好子数组，满足：该子数组的和是k的整数倍。|求数组前缀和，prefix sum，并且用一个字典记录前缀和对应位置。||
+|85|545|Boundary of Binary Tree|[Link](https://leetcode.com/problems/continuous-subarray-sum/description/)|给定一个二叉树，求其外围节点组成的数组。|深度优先遍历，找到左右边界，再找到所有叶子节点，然后组成外围节点。||
+|86|708|Insert into a Sorted Circular Linked List|[Link](https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/description/)|给定一个环形链表，链表中的数字是排序好的，即除了最大节点，每个节点的后一个节点的值都大。插入一个新的值，使得该环形链表仍然有序。|如果这个值介于链表最大值和最小值之间，则找到一个中间位置即可。如果该值比最大值大，或者比最小值小，则只能插入最大值节点的末尾。||
 
 
 
