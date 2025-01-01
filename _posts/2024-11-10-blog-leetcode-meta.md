@@ -111,6 +111,8 @@ tags:
 |94|43|Multiply Strings|[Link](https://leetcode.com/problems/multiply-strings/description/)|给定两个字符串，代表两个非负整数，返回它们代表整数的乘积，也用字符串表示。|从右向左双层遍历每个字符，取它们代表整数的乘积，加到目标位数上。若大于10，则进位。在返回结果的时候，要注意去除高位0。||
 |95|48|Rotate Image|[Link](https://leetcode.com/problems/rotate-image/)|给定一个nxn矩阵，将其顺时针旋转90度。不要额外分配内存。|对于矩阵左上1/4部分元素（当n为奇数时，要考虑最中间一行/列），将其于对应的四个角的元素进行旋转操作。||
 |96|66|Plus One|[Link](https://leetcode.com/problems/plus-one/description/)|一个数组，每个元素均是0-9的正整数，它们代表了一个大整数的每个位。求该大整数加1后的大整数，也用数组表示返回。|有最低位到最高位，考虑进位。||
+|<span style="color:red">97</span>|127|Word Ladder|[Link](https://leetcode.com/problems/word-ladder/description/)|给定两个字符串，beginWord和endWord，以及一个字符串list，wordList。每次只可以改动一个字符，且改动后的字符串必须在wordList中。能否通过一系列转换，把beginWord转换为endWord。可以的话，返回最小操作步数，不可以，则返回0。|最短路径问题。||
+
 
 
 
