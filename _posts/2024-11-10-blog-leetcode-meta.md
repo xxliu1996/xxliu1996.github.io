@@ -101,7 +101,16 @@ tags:
 |84|523|Continuous Subarray Sum|[Link](https://leetcode.com/problems/continuous-subarray-sum/description/)|给定一个整数数组，求它是否存在一个好子数组，满足：该子数组的和是k的整数倍。|求数组前缀和，prefix sum，并且用一个字典记录前缀和对应位置。||
 |85|545|Boundary of Binary Tree|[Link](https://leetcode.com/problems/continuous-subarray-sum/description/)|给定一个二叉树，求其外围节点组成的数组。|深度优先遍历，找到左右边界，再找到所有叶子节点，然后组成外围节点。||
 |86|708|Insert into a Sorted Circular Linked List|[Link](https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/description/)|给定一个环形链表，链表中的数字是排序好的，即除了最大节点，每个节点的后一个节点的值都大。插入一个新的值，使得该环形链表仍然有序。|如果这个值介于链表最大值和最小值之间，则找到一个中间位置即可。如果该值比最大值大，或者比最小值小，则只能插入最大值节点的末尾。||
-
+|87|824|Goat Latin|[Link](https://leetcode.com/problems/goat-latin/description/)|根据一些规则转换字符串。|直接按规则编写程序。||
+|88|1768|Merge Strings Alternately|[Link](https://leetcode.com/problems/merge-strings-alternately/description/)|把两个字符串合并，要求字符位置穿插。|直接按规则编程。||
+|89|2914|Minimum Number of Changes to Make Binary String Beautiful|[Link](https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/description/)|转换一个字符串，使得它可以被分成一到多份，每份都包含偶数个字符，且只包含‘0’或者‘1’。|记住无论怎么分，偶数位置（从0开始）其右边的字符总是分在一起的。所以只要看相邻字符不同的对数，就是所需的最少变换。||
+|90|3|Longest Substring Without Repeating Characters|[Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|给定一个字符串，求该字符串的最长子串，该子串不能包含重复字符。|滑动窗口，用left，right记录滑动窗口的起点和终点。用一个字典记录每个字符当前的最大位置。为了保证窗口内无重复字符，每次right向右移动一次，就查询字典，检查该字符的上一位置是否在窗口内，若在，就需要更新left。每次right更新，都要记录当前的最长子串。||
+|91|16|3Sum Closest|[Link](https://leetcode.com/problems/3sum-closest/description/)|给定一个整数数组，找到三个数，使得它们的和离给定整数最近。|3 sum问题一般就要想办法转换为2 sum问题。先将数组排序，然后固定最小的那个数，在剩下的书中用双指针法找到最近的组合。||
+|92|19|Remove Nth Node From End of List|[Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)|给定一个链表，去除从链表尾倒数第n个节点，返回链表。|双指针，slow和fast，fast比slow多n步，当fast为空指针时，slow正好是要删除的节点。||
+|93|40|Combination Sum II|[Link](https://leetcode.com/problems/combination-sum-ii/description/)|给定一个整数数组，求该数组内所有可能的数字组合，使得这些数字的和等于给定target值。|递归法。先将数组排序，然后考虑每个元素作为子集中的元素，右边数字进入下一个递归层。||
+|94|43|Multiply Strings|[Link](https://leetcode.com/problems/multiply-strings/description/)|给定两个字符串，代表两个非负整数，返回它们代表整数的乘积，也用字符串表示。|从右向左双层遍历每个字符，取它们代表整数的乘积，加到目标位数上。若大于10，则进位。在返回结果的时候，要注意去除高位0。||
+|95|48|Rotate Image|[Link](https://leetcode.com/problems/rotate-image/)|给定一个nxn矩阵，将其顺时针旋转90度。不要额外分配内存。|对于矩阵左上1/4部分元素（当n为奇数时，要考虑最中间一行/列），将其于对应的四个角的元素进行旋转操作。||
+|96|66|Plus One|[Link](https://leetcode.com/problems/plus-one/description/)|一个数组，每个元素均是0-9的正整数，它们代表了一个大整数的每个位。求该大整数加1后的大整数，也用数组表示返回。|有最低位到最高位，考虑进位。||
 
 
 
