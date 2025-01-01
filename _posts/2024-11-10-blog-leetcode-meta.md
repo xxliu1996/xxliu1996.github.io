@@ -112,6 +112,9 @@ tags:
 |95|48|Rotate Image|[Link](https://leetcode.com/problems/rotate-image/)|给定一个nxn矩阵，将其顺时针旋转90度。不要额外分配内存。|对于矩阵左上1/4部分元素（当n为奇数时，要考虑最中间一行/列），将其于对应的四个角的元素进行旋转操作。||
 |96|66|Plus One|[Link](https://leetcode.com/problems/plus-one/description/)|一个数组，每个元素均是0-9的正整数，它们代表了一个大整数的每个位。求该大整数加1后的大整数，也用数组表示返回。|有最低位到最高位，考虑进位。||
 |<span style="color:red">97</span>|127|Word Ladder|[Link](https://leetcode.com/problems/word-ladder/description/)|给定两个字符串，beginWord和endWord，以及一个字符串list，wordList。每次只可以改动一个字符，且改动后的字符串必须在wordList中。能否通过一系列转换，把beginWord转换为endWord。可以的话，返回最小操作步数，不可以，则返回0。|最短路径问题。||
+|98|139|Word Break|[Link](https://leetcode.com/problems/word-break/description/)|给定一个字符串和一个字符串list。是否可以用字符串list中的字符把字符串拆分。|DP。求每个前缀子字符串是否可以用字符串list中的字符拆分。||
+|99|143|Reorder List|[Link](https://leetcode.com/problems/reorder-list/description/)| 问题描述看链接。|快慢指针求中间节点，然后把list一分为二：left_list和right_list。将right_list逆转，然后再和left_list交叉合并。||
+|100|207|Course Schedule|[Link](https://leetcode.com/problems/course-schedule/description/)|排课问题，有些课必须上了别的课才能上，问能否所有课都上。|||
 
 
 
