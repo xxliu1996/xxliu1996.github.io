@@ -84,7 +84,7 @@ tags:
 |67|9|Palindrome Number|[Link](https://leetcode.com/problems/palindrome-number/description/)|判断一个整数是否是回文数字（即从左到右和从右到左顺序排序的数字相等）。|计算数字从右到中间位的倒序数字，看看和原数字从左至中间位数组成的数字是否相等。||
 |68|14|Longest Common Prefix|[Link](https://leetcode.com/problems/palindrome-number/description/https://leetcode.com/problems/longest-common-prefix/description/)|给定一些字符串，找到它们最长公共前缀。|可以先将字符串数组排序，然后逐个比较相邻字符串，找到最长公共前缀。||
 |69|20|Valid Parentheses|[Link](https://leetcode.com/problems/valid-parentheses/description/)|由三种括号（'(){}[]'）组成的字符串，判定该字符串中的括号组合是否正确。|用栈判定所有括号是否成对。||
-|70|269|Alien Dictionary|[Link](https://leetcode.com/problems/alien-dictionary/description/)||||
+|<span style="color:red">70</span>|269|Alien Dictionary|[Link](https://leetcode.com/problems/alien-dictionary/description/)|定义一个外星字母表，它们使用英文字母，但是字母顺序是未知的（即不再是'abc..xyz'）。现给定一些单词，已知单词顺序是按照字母顺序排列的，求外星语言的字母顺序。|拓扑排序问题，每个字母视为一个节点，用set数据结构存储每个节点的入节点和出节点，构造图。然后依次将入度为0的字母从图中去除，放到字母顺序表中。要注意：（1）孤立节点统一视为入度为0；（2）遍历单词时，如果a在b之前，b是a的前缀，说明这个排序是无效的；（3）若图中有环，则图无效（即图中仍有节点，却已经没有入度为0的节点了）。||
 |71|283|Move Zeroes|[Link](https://leetcode.com/problems/move-zeroes/description/)|把数组中所有的0移到数组后部，非0元素的相对顺序要保持不变。|从右向左遍历数组，若当前元素为0，则将该元素移除，同时在数组末尾附加0。||
 |<span style="color:red">72</span>|494|Target Sum|[Link](https://leetcode.com/problems/target-sum/description/)|给定一个非负整数数组，你可以在整数之间添加‘+’和‘-’来组成一个表达式。求所有可能的表达式，使得其结果等于target。返回这种表达式的数量。|递归方法。单纯递归法时间复杂度太高，需要用一个dictionary来保存中间的运算结构。||
 |73|735|Asteroid Collision|[Link](https://leetcode.com/problems/asteroid-collision/description/)|给定一个整数数组，数组中元素绝对值代表一个陨石的质量，正负代表方向：正数为向右，负数为向左。两颗相邻陨石，如果方向相反且相向运动，会发生碰撞。碰撞时，若二者质量相同，会一起爆炸，否则轻的陨石爆炸，重陨石方向和质量不变。求最终陨石的稳定状态。|用栈来遍历数组，比较当前陨石和栈顶元素的大小和符号，来决定是否入栈或者出栈。||
